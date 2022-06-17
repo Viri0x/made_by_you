@@ -17,7 +17,7 @@
 				 	<div class="preview-corner-top"></div>
 			 		<div class="preview">
 				 		<div v-show="isLoad" class="preview-element" v-html="imgPreview"></div>
-				 		<div v-show="isAnim" class="anim"></div>
+				 		<div v-show="isAnim" class="anim"><video id="myVideo" autoplay muted><source src="/upload/anim/BETTERAVE.webm" type="video/webm"></video></div>
 			 		</div>
 			 		<div class="preview-corner-bottom"></div>
 			 	</div>
@@ -35,35 +35,35 @@
 			 	<div class="choix cursor-pointer">
 
 					 	<div>
-						 	<div class="tito" @click="etape('#fff',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/1.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#f0846c',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/2.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#ea7f7f',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/3.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#ce2c2c',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/4.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#e67c00',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/5.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(1,'#fff',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/1.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(2,'#f0846c',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/2.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(3,'#ea7f7f',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/3.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(4,'#ce2c2c',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/4.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(5,'#e67c00',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/5.svg" alt="Made by you" /></div></div>
 					 	</div>
 					 	
 					 	<div>
-						 	<div class="tito" @click="etape('#fdce4e',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/6.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#ffef74',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/7.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#dbef45',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/8.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#a7c30f',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/9.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#6a9b40',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/10.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(6,'#fdce4e',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/6.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(7,'#ffef74',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/7.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(8,'#dbef45',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/8.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(9,'#a7c30f',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/9.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(10,'#6a9b40',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/10.svg" alt="Made by you" /></div></div>
 					 	</div>
 					 	
 					 	<div>
-						 	<div class="tito" @click="etape('#3d7e6a',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/11.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#213279',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/12.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#649cb1',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/13.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#c4e3f7',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/14.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#a32979',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/15.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(11,'#3d7e6a',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/11.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(12,'#213279',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/12.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(13,'#649cb1',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/13.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(14,'#c4e3f7',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/14.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(15,'#a32979',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/15.svg" alt="Made by you" /></div></div>
 					 	</div>
 					 	
 					 	<div>
-						 	<div class="tito" @click="etape('#8b103f',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/16.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#503014',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/17.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#894f15',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/18.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#45423c',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/19.svg" alt="Made by you" /></div></div>
-						 	<div class="tito" @click="etape('#000000',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/20.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(16,'#8b103f',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/16.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(17,'#503014',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/17.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(18,'#894f15',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/18.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(19,'#45423c',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/19.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape(20,'#000000',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/20.svg" alt="Made by you" /></div></div>
 					 	</div>
 				 	
 				 	
@@ -154,18 +154,16 @@ export default {
 	  return(result);
 	}
 	,
-	etape: function(couleur,event)
+	etape: function(video,couleur,event)
 	{
 		var isSelected = false;
 		let paths = document.getElementsByTagName('path')
 		for(let i=0; i<paths.length; i++){
 			if (paths[i].classList.contains('selectPath')) isSelected = true;
 		}
-		
-		
-			
-		console.log("SELECTED : " + document.querySelector('.preview-element > svg').classList.contains('selectPath'))
+
 		if (isSelected) {
+			this.playVideo(video)
 			this.initCouleur();
 			document.querySelector('.selectPath').style.fill = couleur;
 			event.target.parentNode.style.backgroundColor = couleur;
@@ -176,11 +174,23 @@ export default {
 		}
 	}
 	,
+	playVideo(index) {
+		var vid = document.getElementById("myVideo");
+		if (this.isAnim) {
+			this.isAnim = false;
+			vid.pause();
+			vid.currentTime = 0;
+		}
+		
+		
+		vid.src = '/upload/anim/' + index + '.webm';
+		this.isAnim = true;
+		vid.play();
+	}
+	,
 	initCouleur: function() {
 		let paths = document.getElementsByClassName('figure')
-		console.log("TAILLE : " + paths.length)
 		for(let i=0; i<paths.length; i++){
-			console.log("LOOOP")
 			paths[i].style.backgroundColor = 'transparent';
 		}
 	}

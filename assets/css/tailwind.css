@@ -753,6 +753,10 @@ select:-webkit-autofill:focus {
 		@apply absolute z-0 h-full w-full left-0 top-0;
 	}
 	
+	.mainSite .content-made .content-made-left  .preview-content .preview .anim video {
+		@apply w-full h-full;
+	}
+	
 	.mainSite .content-made .content-made-left .preview-content  .preview-element {
 		@apply relative w-2/3 h-auto;
 	}
