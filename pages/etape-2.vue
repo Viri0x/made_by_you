@@ -100,8 +100,17 @@
 				 	</div>
 
 				</div>
-				<div class="preview-nav">
-				 	<div class="type-bt"><nuxt-link to="etape-3">Valider</nuxt-link></div>
+				<div class="preview-nav valid" @mouseleave='hideActiveValidT'>
+					<div @mouseover='displayActiveValidT'  class="type-bt"><nuxt-link to="etape-3">Valider</nuxt-link></div>
+					<div class="zone_carre carre_tf"></div>
+					<div class="zone_carre carre_tr"></div>
+					
+					<div class="zone_carre carre_bl"></div>
+					<div class="zone_carre carre_br"></div>
+					<div class="zone_carre carre_l1"></div>
+					<div class="zone_carre carre_l2"></div>
+					<div class="zone_carre carre_r1"></div>
+					<div class="zone_carre carre_r2"></div>
 			 	</div>
 		 	</div>
 	 	</div>
@@ -477,6 +486,20 @@ export default {
 		var _parent = el.parentNode
 		console.log("val = " + event.target.innerHTML)
 		_parent.classList.toggle('valid');
+	}
+	,
+	displayActiveValidT: function() {
+		let paths = document.querySelectorAll('.zone_carre')
+		for(let i=0; i<paths.length; i++){
+			paths[i].classList.add('active')
+		}
+	}
+	,
+	hideActiveValidT: function() {
+		let paths = document.querySelectorAll('.zone_carre')
+		for(let i=0; i<paths.length; i++){
+			paths[i].classList.remove('active')
+		}
 	}
   }
 }

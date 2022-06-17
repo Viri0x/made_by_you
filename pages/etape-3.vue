@@ -35,42 +35,51 @@
 			 	<div class="choix cursor-pointer">
 
 					 	<div>
-						 	<div @click="etape('#fff')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/1.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#f0846c')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/2.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#ea7f7f')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/3.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#ce2c2c')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/4.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#e67c00')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/5.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#fff',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/1.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#f0846c',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/2.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#ea7f7f',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/3.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#ce2c2c',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/4.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#e67c00',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/5.svg" alt="Made by you" /></div></div>
 					 	</div>
 					 	
 					 	<div>
-						 	<div @click="etape('#fdce4e')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/6.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#ffef74')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/7.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#dbef45')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/8.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#a7c30f')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/9.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#6a9b40')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/10.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#fdce4e',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/6.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#ffef74',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/7.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#dbef45',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/8.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#a7c30f',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/9.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#6a9b40',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/10.svg" alt="Made by you" /></div></div>
 					 	</div>
 					 	
 					 	<div>
-						 	<div @click="etape('#3d7e6a')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/11.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#213279')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/12.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#649cb1')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/13.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#c4e3f7')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/14.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#a32979')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/15.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#3d7e6a',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/11.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#213279',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/12.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#649cb1',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/13.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#c4e3f7',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/14.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#a32979',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/15.svg" alt="Made by you" /></div></div>
 					 	</div>
 					 	
 					 	<div>
-						 	<div @click="etape('#8b103f')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/16.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#503014')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/17.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#894f15')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/18.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#45423c')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/19.svg" alt="Made by you" /></div></div>
-						 	<div @click="etape('#000000')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/20.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#8b103f',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/16.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#503014',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/17.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#894f15',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/18.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#45423c',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/19.svg" alt="Made by you" /></div></div>
+						 	<div class="tito" @click="etape('#000000',$event)"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/20.svg" alt="Made by you" /></div></div>
 					 	</div>
 				 	
 				 	
 
 				</div>
-				<div class="preview-nav">
-				 	<div class="type-bt"><nuxt-link to="etape-4">Valider</nuxt-link></div>
+				<div class="preview-nav valid" @mouseleave='hideActiveValidT'>
+					<div @mouseover='displayActiveValidT'  class="type-bt"><nuxt-link to="etape-3">Valider</nuxt-link></div>
+					<div class="zone_carre carre_tf"></div>
+					<div class="zone_carre carre_tr"></div>
+					
+					<div class="zone_carre carre_bl"></div>
+					<div class="zone_carre carre_br"></div>
+					<div class="zone_carre carre_l1"></div>
+					<div class="zone_carre carre_l2"></div>
+					<div class="zone_carre carre_r1"></div>
+					<div class="zone_carre carre_r2"></div>
 			 	</div>
 		 	</div>
 	 	</div>
@@ -98,6 +107,7 @@ export default {
 	    base_debardeur:new Array('forme_vetement','couture1','couture2','couture3'),
 	    base_chemise:new Array('forme_vetement','manche1','manche2','col_chemise','couture1','couture2','couture3','boutons_ronds'),
 	    base_polo:new Array('forme_vetement','col_polo','manche1','manche2','couture1','couture2','boutons'),
+	    isSelected:false,
     }
   },
   mounted() {
@@ -144,9 +154,35 @@ export default {
 	  return(result);
 	}
 	,
-	etape: function(couleur)
+	etape: function(couleur,event)
 	{
-		document.querySelector('.selectPath').style.fill = couleur;
+		var isSelected = false;
+		let paths = document.getElementsByTagName('path')
+		for(let i=0; i<paths.length; i++){
+			if (paths[i].classList.contains('selectPath')) isSelected = true;
+		}
+		
+		
+			
+		console.log("SELECTED : " + document.querySelector('.preview-element > svg').classList.contains('selectPath'))
+		if (isSelected) {
+			this.initCouleur();
+			document.querySelector('.selectPath').style.fill = couleur;
+			event.target.parentNode.style.backgroundColor = couleur;
+		}		
+		else {
+			document.querySelector('.infos > div').innerHTML = '<strong>Pour attribuer une couleur<br />sélectionner un élément</strong>'
+			setTimeout(function () { document.querySelector('.infos > div').innerHTML='…puis sélectionnez la couleur que vous souhaitez lui attribuer :'; }.bind(this), 2000);
+		}
+	}
+	,
+	initCouleur: function() {
+		let paths = document.getElementsByClassName('figure')
+		console.log("TAILLE : " + paths.length)
+		for(let i=0; i<paths.length; i++){
+			console.log("LOOOP")
+			paths[i].style.backgroundColor = 'transparent';
+		}
 	}
 	,
 	loadEtape: function() {
@@ -237,6 +273,20 @@ export default {
 	    
 	    this.parametres = para;
 	    localStorage.setItem('parametres', JSON.stringify(this.parametres));
+	}
+	,
+	displayActiveValidT: function() {
+		let paths = document.querySelectorAll('.zone_carre')
+		for(let i=0; i<paths.length; i++){
+			paths[i].classList.add('active')
+		}
+	}
+	,
+	hideActiveValidT: function() {
+		let paths = document.querySelectorAll('.zone_carre')
+		for(let i=0; i<paths.length; i++){
+			paths[i].classList.remove('active')
+		}
 	}
 	
   }

@@ -728,7 +728,7 @@ select:-webkit-autofill:focus {
 	}
 	
 	.choix {
-		height:calc(22 * var(--size_square));
+		height:calc(21 * var(--size_square));
 		padding-top:0;
 	}
 	
@@ -918,6 +918,10 @@ select:-webkit-autofill:focus {
 		width:calc(22 * var(--size_square));
 	}
 	
+	.mainSite .content-made .content-made-right.etape3 .infos {
+		padding-left:calc(4 * var(--size_square) + 1px);
+	}
+	
 	.mainSite .content-made .content-made-right .infos > div {
 		@apply flex justify-center items-center bg-mainBg text-center w-full;
 		padding-left:calc(1 * var(--size_square));
@@ -937,6 +941,11 @@ select:-webkit-autofill:focus {
 	
 	.mainSite .content-made .content-made-right.etape2 .choix {
 		padding-top:calc(3 * var(--size_square));
+	}
+	
+	.mainSite .content-made .content-made-right.etape3 .choix {
+		padding-top:calc(2 * var(--size_square));
+		padding-left:calc(1 * var(--size_square));
 	}
 	
 	.mainSite .content-made .content-made-right .choix.start {
@@ -1001,7 +1010,7 @@ select:-webkit-autofill:focus {
 	}
 	
 	.mainSite .content-made .content-made-right.etape3 .choix > div {
-		@apply flex justify-center items-center;
+		@apply flex items-center;
 		margin-bottom:calc(2 * var(--size_square) - 1px);
 	}
 	
@@ -1013,7 +1022,7 @@ select:-webkit-autofill:focus {
 		@apply relative bg-mainBg;
 		width:calc(3 * var(--size_square));
 		height:calc(3 * var(--size_square) + 1px);
-		margin-right:calc(3 * var(--size_square) - 1px);
+		margin-right:calc(2 * var(--size_square));
 	}
 	
 	.mainSite .content-made .content-made-right.etape3 .choix > div > div .figure {
