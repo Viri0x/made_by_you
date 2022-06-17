@@ -1,10 +1,15 @@
+const webpack = require('webpack')
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  router: {
+    /*base: '/diplome_2022/marie_santi'*/
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'made_by_you_new',
+    title: 'made by you',
     htmlAttrs: {
       lang: 'en'
     },
@@ -15,6 +20,13 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
+    ,
+    script: [
+      {
+        src: '/js/function.js',
+        body: true,
+      }
     ]
   },
 
@@ -34,17 +46,58 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
-
+  gsap: {
+    /* Module Options */
+  },
+  
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+	 //baseURL: 'http://localhost:4003',
+	 baseURL: 'https://api-ampersound.onoci.net',
+	 proxyHeaders: true,
+    credentials: false
+  },
+  auth: {
+	   redirect: {
+	    login: '/login',
+	    logout: '/',
+	    callback: '/login',
+	    home: '/'
+	  },
+	  localStorage: true,
+	  cookie: {
+		secure: true,
+	    prefix: 'auth.',
+	    options: {
+	      path: '/',
+	      maxAge: 10800
+	    }
+	  },
+	  strategies: {
+	    local: {
+	      endpoints: {
+	        login: { url: 'login', method: 'post', propertyName: 'access_token' },
+	        user: { url: 'me', method: 'get', propertyName: 'content' },
+	        logout: false
+	      }
+	    }
+	  }
+	},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
+  ,
+  loading: false,
+  generate: {
+	  dir: 'my-site'
+	}
 }

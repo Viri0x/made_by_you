@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43.984" height="52.843" viewBox="0 0 43.984 52.843">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2054" data-name="Rectangle 2054" width="43.984" height="52.843" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_914" data-name="Groupe 914" transform="translate(-14.648 -10.388)">
+    <g id="illu_crevette" transform="translate(14.648 10.388)">
+      <path id="Tracé_488" data-name="Tracé 488" d="M13.38,13.276l4.45,8.734h8.721l8.728-8.739V8.9h-17.5Z" fill="#fff"/>
+      <path id="Tracé_489" data-name="Tracé 489" d="M13.38,13.276l4.45,8.734h8.721l8.728-8.739V8.9h-17.5Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+      <g id="Groupe_906" data-name="Groupe 906">
+        <g id="Groupe_905" data-name="Groupe 905" clip-path="url(#clip-path)">
+          <path id="Tracé_490" data-name="Tracé 490" d="M29.2,13.271a1.6,1.6,0,1,1-1.6-1.6,1.6,1.6,0,0,1,1.6,1.6" fill="#161615"/>
+          <path id="Tracé_491" data-name="Tracé 491" d="M35.246,11.163h5.106l3.381-2.891V4.532H26.275L21.9.177" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <path id="Tracé_492" data-name="Tracé 492" d="M13.522,30.733l4.294-8.725L9.078,17.635l-4.368.01L.352,26.376,13.4,30.732H.368L2.55,43.779H6.833l10.861-4.322Z" fill="#fff"/>
+          <path id="Tracé_493" data-name="Tracé 493" d="M13.522,30.733l4.294-8.725L9.078,17.635l-4.368.01L.352,26.376,13.4,30.732H.368L2.55,43.779H6.833l10.861-4.322Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <path id="Tracé_494" data-name="Tracé 494" d="M17.694,39.457,9.063,48.2l8.758,4.364,8.5-4.325V43.832Z" fill="#fff"/>
+          <path id="Tracé_495" data-name="Tracé 495" d="M17.694,39.457,9.063,48.2l8.758,4.364,8.5-4.325V43.832Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <rect id="Rectangle_2052" data-name="Rectangle 2052" width="4.355" height="4.367" transform="translate(26.325 43.832)" fill="#fff"/>
+          <rect id="Rectangle_2053" data-name="Rectangle 2053" width="4.355" height="4.367" transform="translate(26.325 43.832)" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <path id="Tracé_496" data-name="Tracé 496" d="M35.113,43.834,30.68,48.2l.078-8.732h4.355Z" fill="#fff"/>
+          <path id="Tracé_497" data-name="Tracé 497" d="M35.113,43.834,30.68,48.2l.078-8.732h4.355Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <path id="Tracé_498" data-name="Tracé 498" d="M35.037,52.566H30.682l0-8.734L35.037,48.2Z" fill="#fff"/>
+          <path id="Tracé_499" data-name="Tracé 499" d="M35.037,52.566H30.682l0-8.734L35.037,48.2Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <path id="Tracé_500" data-name="Tracé 500" d="M35.314,12.219h5.1l2.5-2.353V5.9H26.275L21.9,1.853" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <path id="Tracé_501" data-name="Tracé 501" d="M17.334,38.64l2.06-5.981,3.924-1.845-5.828-2.1L15.4,34.633Z" fill="#fff"/>
+          <path id="Tracé_502" data-name="Tracé 502" d="M17.334,38.64l2.06-5.981,3.924-1.845-5.828-2.1L15.4,34.633Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <line id="Ligne_134" data-name="Ligne 134" x1="1.904" y1="3.949" transform="translate(17.49 28.709)" fill="#fff"/>
+          <line id="Ligne_135" data-name="Ligne 135" x1="1.904" y1="3.949" transform="translate(17.49 28.709)" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <path id="Tracé_503" data-name="Tracé 503" d="M14.466,28.8l6-2.024,3.857,1.982-1.987-5.842-5.91,1.961Z" fill="#fff"/>
+          <path id="Tracé_504" data-name="Tracé 504" d="M14.466,28.8l6-2.024,3.857,1.982-1.987-5.842-5.91,1.961Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <line id="Ligne_136" data-name="Ligne 136" y1="3.882" x2="1.88" transform="translate(20.454 22.919)" fill="#fff"/>
+          <line id="Ligne_137" data-name="Ligne 137" y1="3.882" x2="1.88" transform="translate(20.454 22.919)" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <path id="Tracé_505" data-name="Tracé 505" d="M9.078,17.635l4.3-4.359,4.4,8.672a.022.022,0,0,1-.03.03Z" fill="#fff"/>
+          <path id="Tracé_506" data-name="Tracé 506" d="M9.078,17.635l4.3-4.359,4.4,8.672a.022.022,0,0,1-.03.03Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <path id="Tracé_507" data-name="Tracé 507" d="M4.666,30.723V27.829L13.312,30.7a.015.015,0,0,1-.005.03Z" fill="#fff"/>
+          <path id="Tracé_508" data-name="Tracé 508" d="M4.666,30.723V27.829L13.312,30.7a.015.015,0,0,1-.005.03Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+          <path id="Tracé_509" data-name="Tracé 509" d="M10.83,46.409,8.485,43.121l9.133-3.634a.017.017,0,0,1,.018.028Z" fill="#fff"/>
+          <path id="Tracé_510" data-name="Tracé 510" d="M10.83,46.409,8.485,43.121l9.133-3.634a.017.017,0,0,1,.018.028Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

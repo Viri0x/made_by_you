@@ -7,7 +7,7 @@
  	
  	<div class="content">
 	 	<header>
-	 		<div class="logo">MADE BY YOU</div>
+	 		<div class="logo"><nuxt-link to="/">MADE BY YOU</nuxt-link></div>
 	 		<div class="like"><img class="img-logo" src="~/assets/img/like.svg" alt="Made by you" /></div>
 	 	</header>
 	 	
@@ -36,13 +36,13 @@
 				 	
 				 	<div v-show="id_etape_1 == 1">
 					 	<div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colV'),new Array('col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />en V</div><div class="figureSVG"><img src="/upload/svg/colV.svg" @click="validAction($event);" alt="Made by you" /></div></div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colclaudine'),new Array('col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />Claudine</div><div class="figureSVG"><img src="/upload/svg/colclaudine.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colV','colV'),new Array('forme_vetement','col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />en V</div><div class="figureSVG"><img src="/upload/svg/colV.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colclaudine','colclaudine'),new Array('forme_vetement','col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />Claudine</div><div class="figureSVG"><img src="/upload/svg/colclaudine.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('col_boutons'),new Array())"><div @mouseover='displayActiveValid($event)'>Col<br />3 boutons</div><div class="figureSVG"><img src="/upload/svg/bouton.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 					 	</div>
 					 	
 					 	<div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colmontant'),new Array('col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />montant</div><div class="figureSVG"><img src="/upload/svg/colroule.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colmontant','colmontant'),new Array('forme_vetement','col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />montant</div><div class="figureSVG"><img src="/upload/svg/colroule.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('couture1','couture2'),new Array())"><div @mouseover='displayActiveValid($event)'>Coutures<br />manches</div><div class="figureSVG"><img src="/upload/svg/manchegauche.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('poche'),new Array())"><div @mouseover='displayActiveValid($event)'>Petite<br />poches</div><div class="figureSVG"><img src="/upload/svg/petitepoche.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 					 	</div>
@@ -69,7 +69,7 @@
 				 	
 				 	<div v-show="id_etape_1 == 3">
 					 	<div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('col_claudine'),new Array('col_chemise'))"><div @mouseover='displayActiveValid($event)'>Col<br />Claudine</div><div class="figureSVG"><img src="/upload/svg/colclaudine.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('col_claudine','forme_colclaudine'),new Array('col_chemise','forme_vetement'))"><div @mouseover='displayActiveValid($event)'>Col<br />Claudine</div><div class="figureSVG"><img src="/upload/svg/colclaudine.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBefore_3(new Array('manche_ballons1','manche_ballons2'),new Array('manche1','manche2','couture1','couture2'))"><div @mouseover='displayActiveValid($event)'>Manches<br />ballon</div><div class="figureSVG"><img src="/upload/svg/mancheballonG.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBefore_3(new Array('manche_volants1','manche_volants2'),new Array('manche1','manche2','couture1','couture2'))"><div @mouseover='displayActiveValid($event)'>Manches<br />à volant</div><div class="figureSVG"><img src="/upload/svg/manchevolantG.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 					 	</div>
@@ -87,7 +87,7 @@
 				 	
 				 	<div v-show="id_etape_1 == 4">
 					 	<div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_4(new Array('colclaudine'),new Array('col_polo'))"><div @mouseover='displayActiveValid($event)'>Col<br />Claudine</div><div class="figureSVG"><img @click="validAction($event);" src="/upload/svg/colclaudine.svg"  alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_4(new Array('colclaudine','forme_polo_colclaudine'),new Array('forme_vetement','col_polo'))"><div @mouseover='displayActiveValid($event)'>Col<br />Claudine</div><div class="figureSVG"><img @click="validAction($event);" src="/upload/svg/colclaudine.svg"  alt="Made by you" /></div></div>
 						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('manche_ballons1','manche_ballons2'),new Array('manche1', 'manche2','couture1', 'couture2'))"><div @mouseover='displayActiveValid($event)'>Manches<br />ballon</div><div class="figureSVG"><img src="/upload/svg/mancheballonG.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('poche'),new Array())"><div @mouseover='displayActiveValid($event)'>Petite<br />poche</div><div class="figureSVG"><img src="/upload/svg/petitepoche.svg"  @click="validAction($event);" alt="Made by you" /></div></div>
 					 	</div>
@@ -101,7 +101,7 @@
 
 				</div>
 				<div class="preview-nav valid" @mouseleave='hideActiveValidT'>
-					<div @mouseover='displayActiveValidT'  class="type-bt"><nuxt-link to="etape-3">Valider</nuxt-link></div>
+					<div @mouseover='displayActiveValidT'  class="type-bt"><nuxt-link to="/etape-3">Valider</nuxt-link></div>
 					<div class="zone_carre carre_tf"></div>
 					<div class="zone_carre carre_tr"></div>
 					
@@ -120,7 +120,14 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
+	middleware: 'auth',
+   computed: {
+    ...mapGetters(['isAuthenticated', 'loggedInfont']),
+  }
+  ,
 	layout: 'default',
 	data() {
     return {
@@ -142,6 +149,7 @@ export default {
   },
   mounted() {
 	this.parametres = JSON.parse(localStorage.getItem('parametres') || "[]") ;
+	console.log("PARAMETRES : " + this.parametres)
 	this.loadEtape();
 	this.getDimensions();
 	window.addEventListener('resize', this.getDimensions);
@@ -218,27 +226,26 @@ export default {
 		if (para[0] == 'forme_tshirt_colclaudine') {
 			document.querySelector('.preview-element #forme_tshirt_colmontant').style.display = "none";
 			document.querySelector('.preview-element #forme_tshirt_colV').style.display = "none";
+			document.querySelector('.preview-element #colmontant').style.display = "none";
+			document.querySelector('.preview-element #colV').style.display = "none";
+			
+			//colV colmontant colclaudine
 		}
 		
 		if (para[0] == 'forme_tshirt_colmontant') {
 			document.querySelector('.preview-element #forme_tshirt_colclaudine').style.display = "none";
 			document.querySelector('.preview-element #forme_tshirt_colV').style.display = "none";
-		}
+
+			document.querySelector('.preview-element #colclaudine').style.display = "none";
+			document.querySelector('.preview-element #colV').style.display = "none";		}
 		
 		if (para[0] == 'forme_tshirt_colV') {
 			document.querySelector('.preview-element #forme_tshirt_colclaudine').style.display = "none";
 			document.querySelector('.preview-element #forme_tshirt_colmontant').style.display = "none";
+			document.querySelector('.preview-element #colmontant').style.display = "none";
+			document.querySelector('.preview-element #colclaudine').style.display = "none";
 		}
-		
-		if (para[0] == 'forme_tshirt_colclaudine') {
-			document.querySelector('.preview-element #forme_tshirt_colmontant').style.display = "none";
-			document.querySelector('.preview-element #forme_tshirt_colV').style.display = "none";
-		}
-		
-		if (para[0] == 'forme_tshirt_colmontant') {
-			document.querySelector('.preview-element #forme_tshirt_colclaudine').style.display = "none";
-			document.querySelector('.preview-element #forme_tshirt_colV').style.display = "none";
-		}
+
 
 		if (para[0] == 'couture1') {
 			
@@ -358,6 +365,7 @@ export default {
 		
 		for (var i=0;i<para.length;i++) {
 			if (sens) {
+				console.log("tito : " + para[i])
 				document.querySelector('.preview-element #' + para[i]).style.display = "block";
 			}
 			else {
@@ -501,6 +509,11 @@ export default {
 			paths[i].classList.remove('active')
 		}
 	}
+	,
+		async logout() {
+	      await this.$auth.logout();
+	      this.$router.push('/login')
+	    }
   }
 }
 </script>

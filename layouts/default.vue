@@ -1,5 +1,5 @@
 <template>
-  <div class="mainSite">
+  <div class="mainSite BIG">
     <Nuxt />
     <TheSVG />
   </div>

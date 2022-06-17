@@ -2,21 +2,31 @@
 
   <div class="container">
  	<div class="content">
-	 	<header>
+	 	<header class="home">
 	 		<div class="logo">MADE BY YOU</div>
-	 		<div class="like"><img class="img-logo" src="~/assets/img/like.svg" alt="Made by you" /></div>
 	 	</header>
 	 	
-	 	<div class="content-made">
-		 	
+	 	<div class="content-home">
+		 	<video id="myVideo" autoplay muted loop><source src="/upload/home.mp4" type="video/mp4"></video>
 	 	</div>
+	 	
+	 	<footer class="home">
+	 		<div class="logo"><nuxt-link to="/etape-1">commencer</nuxt-link></div>
+	 	</footer>
  	</div>
 
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
+	middleware: 'auth',
+   computed: {
+    ...mapGetters(['isAuthenticated', 'loggedInfont']),
+  }
+  ,
 	layout: 'default',
 	data() {
     return {

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49.901" height="42.24" viewBox="0 0 49.901 42.24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1841" data-name="Rectangle 1841" width="49.901" height="42.24" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_917" data-name="Groupe 917" transform="translate(0 0)">
+    <g id="Groupe_745" data-name="Groupe 745" clip-path="url(#clip-path)">
+      <path id="Tracé_363" data-name="Tracé 363" d="M11.659,25.04a1.6,1.6,0,1,0,1.6,1.6,1.6,1.6,0,0,0-1.6-1.6" fill="#161615"/>
+      <rect id="Rectangle_1838" data-name="Rectangle 1838" width="1.099" height="2.198" transform="translate(2.975 28.42)" fill="#161615"/>
+      <rect id="Rectangle_1839" data-name="Rectangle 1839" width="3.87" height="15.151" transform="translate(15.444 4.001)" fill="#fff"/>
+      <rect id="Rectangle_1840" data-name="Rectangle 1840" width="3.87" height="15.151" transform="translate(15.444 4.001)" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+      <path id="Tracé_364" data-name="Tracé 364" d="M23.109,41.99V38.1h7.453V34.3h3.9V30.616h3.9" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+      <path id="Tracé_365" data-name="Tracé 365" d="M7.916,41.99l-.039-3.837h4.072V34.4H.25V22.985H4.093V19.152l3.719.046V4h3.847V.25h3.784" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+      <path id="Tracé_366" data-name="Tracé 366" d="M7.916,41.99H45.9V38.25h3.751v-4H46v-7.36H42.052V23.141H23.106V4H19.314l0-3.751H15.443V4h-.022" fill="none" stroke="#161615" stroke-linecap="square" stroke-miterlimit="10" stroke-width="0.5"/>
+      <line id="Ligne_114" data-name="Ligne 114" x2="3.495" transform="translate(11.949 38.153)" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+      <path id="Tracé_367" data-name="Tracé 367" d="M11.659,19.152V4h3.784" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>

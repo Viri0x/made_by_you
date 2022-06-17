@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30.285" height="38.857" viewBox="0 0 30.285 38.857">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1845" data-name="Rectangle 1845" width="30.285" height="38.857" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="illu_oeuf" transform="translate(0 0)">
+    <path id="Tracé_385" data-name="Tracé 385" d="M11.578.25V2.594L8.684,2.588V6.844L4.467,6.832v6.362H.25V32.249l4.234-.008v4.2H8.828v2.167H21.421v-2.12h4.264V32.249h4.349V13.181H25.949V6.831H21.469V2.616l-2.726-.009V.25Z" fill="#fff"/>
+    <g id="Groupe_751" data-name="Groupe 751">
+      <g id="Groupe_750" data-name="Groupe 750" clip-path="url(#clip-path)">
+        <path id="Tracé_386" data-name="Tracé 386" d="M.25,32.249V13.195H4.467V6.832l4.218.013V2.589l2.894,0V.25h7.164V2.607l2.727.01V6.831H25.95v6.351h4.085V32.249H25.686v4.238H21.422v2.12H8.829V36.439H4.485v-4.2Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+      </g>
+    </g>
+    <rect id="Rectangle_1846" data-name="Rectangle 1846" width="2.113" height="2.118" transform="translate(19.004 11.08)" fill="#fff"/>
+    <rect id="Rectangle_1847" data-name="Rectangle 1847" width="2.113" height="2.118" transform="translate(19.004 11.08)" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+    <rect id="Rectangle_1848" data-name="Rectangle 1848" width="2.113" height="2.118" transform="translate(21.117 13.199)" fill="#fff"/>
+    <rect id="Rectangle_1849" data-name="Rectangle 1849" width="2.113" height="2.118" transform="translate(21.117 13.199)" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+  </g>
+</svg>

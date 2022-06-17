@@ -7,7 +7,7 @@
  	
  	<div class="content">
 	 	<header>
-	 		<div class="logo">MADE BY YOU</div>
+	 		<div class="logo"><nuxt-link to="/">MADE BY YOU</nuxt-link></div>
 	 		<div class="like"><img class="img-logo" src="~/assets/img/like.svg" alt="Made by you" /></div>
 	 	</header>
 	 	
@@ -31,7 +31,7 @@
 		 	</div>
 		 	<div class="content-made-right etape4">
 			 	
-			 	<div class="infos"><div>Pour cette dernière étape de personnalisation,<br />vous pouvez ajouter un motif ainsi que vos initiales (jusqu’à 3 lettres) : </div></div>
+			 	<div class="infos"><div>Pour cette dernière étape de personnalisation, vous pouvez ajouter un motif ainsi que vos initiales (3 lettres max) : </div></div>
 			 	<div class="choix cursor-pointer start">
 
 					 	<div class="zone_1">
@@ -48,8 +48,17 @@
 				 	
 
 				</div>
-				<div class="preview-nav">
-				 	<div class="type-bt"><nuxt-link to="etape-2">Valider</nuxt-link></div>
+				<div class="preview-nav valid" @mouseleave='hideActiveValidT'>
+					<div @mouseover='displayActiveValidT'  class="type-bt"><nuxt-link to="/etape-4">Valider</nuxt-link></div>
+					<div class="zone_carre carre_tf"></div>
+					<div class="zone_carre carre_tr"></div>
+					
+					<div class="zone_carre carre_bl"></div>
+					<div class="zone_carre carre_br"></div>
+					<div class="zone_carre carre_l1"></div>
+					<div class="zone_carre carre_l2"></div>
+					<div class="zone_carre carre_r1"></div>
+					<div class="zone_carre carre_r2"></div>
 			 	</div>
 		 	</div>
 	 	</div>
@@ -59,7 +68,14 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
+	middleware: 'auth',
+   computed: {
+    ...mapGetters(['isAuthenticated', 'loggedInfont']),
+  }
+  ,
 	layout: 'default',
 	data() {
     return {
@@ -135,8 +151,6 @@ export default {
 		var para = this.parametres;
 		if (para.id_etape_1 == 0) para.id_etape_1 = 1;
 		this.id_etape_1 = para.id_etape_1
-		this.id_etape_2 = para.id_etape_2
-		this.id_etape_3 = para.id_etape_3
 		var file = this.getFormByid(this.id_etape_1)
 		this.loadSvg(file)
 		this.isLoad = true;
@@ -147,30 +161,7 @@ export default {
 	}
 	,
 	loadSvg: function(file) {
-		document.querySelector('.preview-element').classList.add('loading');
-		
-		this.imgPreview = document.querySelector('#Model-' + file).innerHTML;
-		var initPara = new Array();
-		var svg_el =  document.querySelector('.preview-element #forme_vetement');
-		
-		switch(file) {
-			case 'tshirt' : initPara = this.base_tshirt;
-					 break;
-			case 'debardeur' : initPara = this.base_debardeur;
-					 break;
-			case 'chemise' : initPara = this.base_chemise;
-					 break;
-			case 'polo' : initPara = this.base_polo;
-					 break;
-		}
-		
-		setTimeout(function() {
-			for (var i=0;i<initPara.length;i++) {
-				var svg_el =  document.querySelector('.preview-element #' + initPara[i]).style.display = "block";
-			}
-			
-			document.querySelector('.preview-element').classList.remove('loading');
-		}, 1000);
+		document.querySelector('.preview-element').innerHTML = this.parametres.id_etape_3;
 		
 	}
 	,
@@ -201,6 +192,25 @@ export default {
 	    this.parametres = para;
 	    localStorage.setItem('parametres', JSON.stringify(this.parametres));
 	}
+	,
+	displayActiveValidT: function() {
+		let paths = document.querySelectorAll('.zone_carre')
+		for(let i=0; i<paths.length; i++){
+			paths[i].classList.add('active')
+		}
+	}
+	,
+	hideActiveValidT: function() {
+		let paths = document.querySelectorAll('.zone_carre')
+		for(let i=0; i<paths.length; i++){
+			paths[i].classList.remove('active')
+		}
+	}
+	,
+		async logout() {
+	      await this.$auth.logout();
+	      this.$router.push('/login')
+	    }
   }
 }
 </script>

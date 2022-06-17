@@ -7,7 +7,7 @@
  	
  	<div class="content">
 	 	<header>
-	 		<div class="logo">MADE BY YOU</div>
+	 		<div class="logo"><nuxt-link to="/">MADE BY YOU</nuxt-link></div>
 	 		<div class="like"><img class="img-logo" src="~/assets/img/like.svg" alt="Made by you" /></div>
 	 	</header>
 	 	
@@ -17,7 +17,7 @@
 				 	<div class="preview-corner-top"></div>
 			 		<div class="preview">
 				 		<div v-show="isLoad" class="preview-element" v-html="imgPreview"></div>
-				 		<div v-show="isAnim" class="anim"><video id="myVideo" autoplay muted><source src="/upload/anim/BETTERAVE.webm" type="video/webm"></video></div>
+				 		<div class="anim isHidden"><video id="myVideo" autoplay muted><source src="/upload/anim/BETTERAVE.webm" type="video/webm"></video></div>
 			 		</div>
 			 		<div class="preview-corner-bottom"></div>
 			 	</div>
@@ -70,7 +70,7 @@
 
 				</div>
 				<div class="preview-nav valid" @mouseleave='hideActiveValidT'>
-					<div @mouseover='displayActiveValidT'  class="type-bt"><nuxt-link to="etape-3">Valider</nuxt-link></div>
+					<div @mouseover='displayActiveValidT'  class="type-bt"><nuxt-link to="/etape-4">Valider</nuxt-link></div>
 					<div class="zone_carre carre_tf"></div>
 					<div class="zone_carre carre_tr"></div>
 					
@@ -89,7 +89,14 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
+	middleware: 'auth',
+   computed: {
+    ...mapGetters(['isAuthenticated', 'loggedInfont']),
+  }
+  ,
 	layout: 'default',
 	data() {
     return {
@@ -172,18 +179,30 @@ export default {
 			document.querySelector('.infos > div').innerHTML = '<strong>Pour attribuer une couleur<br />sélectionner un élément</strong>'
 			setTimeout(function () { document.querySelector('.infos > div').innerHTML='…puis sélectionnez la couleur que vous souhaitez lui attribuer :'; }.bind(this), 2000);
 		}
+		
+		this.parametres.id_etape_3 = document.querySelector('.preview-element').innerHTML;
+		localStorage.setItem('parametres', JSON.stringify(this.parametres));
 	}
 	,
 	playVideo(index) {
 		var vid = document.getElementById("myVideo");
+		var _this = this 
+		console.log("this1 : " + _this)
+		vid.onended = function(_this, event) {
+			console.log("this2 : " + _this)
+		    _this.isAnim = false;
+		    document.querySelector('.anim').classList.add('isHidden')
+		};
 		if (this.isAnim) {
 			this.isAnim = false;
+			document.querySelector('.anim').classList.add('isHidden')
 			vid.pause();
 			vid.currentTime = 0;
 		}
 		
 		
 		vid.src = '/upload/anim/' + index + '.webm';
+		document.querySelector('.anim').classList.remove('isHidden')
 		this.isAnim = true;
 		vid.play();
 	}
@@ -298,6 +317,11 @@ export default {
 			paths[i].classList.remove('active')
 		}
 	}
+	,
+		async logout() {
+	      await this.$auth.logout();
+	      this.$router.push('/login')
+	    }
 	
   }
 }

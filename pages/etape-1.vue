@@ -7,7 +7,7 @@
  	
  	<div class="content">
 	 	<header>
-	 		<div class="logo">MADE BY YOU</div>
+	 		<div class="logo" @click="logout">MADE BY YOU</div>
 	 		<div class="like"><img class="img-logo" src="~/assets/img/like.svg" alt="Made by you" /></div>
 	 	</header>
 	 	
@@ -40,7 +40,7 @@
 				 	<div @click="etape(4,'polo',$event)">P</div>
 				</div>
 				<div class="preview-nav valid" @mouseleave='hideActiveValid'>
-					<div @mouseover='displayActiveValid'  class="type-bt"><nuxt-link to="etape-2">Valider</nuxt-link></div>
+					<div @mouseover='displayActiveValid'  class="type-bt"><nuxt-link to="/etape-2">Valider</nuxt-link></div>
 					<div class="zone_carre carre_tf"></div>
 					<div class="zone_carre carre_tr"></div>
 					
@@ -60,7 +60,14 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
+	middleware: 'auth',
+   computed: {
+    ...mapGetters(['isAuthenticated', 'loggedInUser']),
+  }
+  ,
 	layout: 'default',
 	data() {
     return {
@@ -70,7 +77,7 @@ export default {
 	    isSoon:false,
 	    isAnim:false,
 	    isLoad:false,
-	    imgPreview:'',
+	    imgPreview:'<div class="mby">M.B.Y</div>',
 	    parametres:'',
 		base_tshirt:new Array('forme_vetement','col_rond','manche1','manche2','couture3'),
 	    base_debardeur:new Array('forme_vetement','couture1','couture2','couture3'),
@@ -128,7 +135,23 @@ export default {
 		event.target.classList.add('active');
 		this.loadSvg(file)
 		this.parametres.id_etape_1 = id;
-		localStorage.setItem('parametres', JSON.stringify(this.parametres));
+		
+		
+		
+		var para = new Object();
+	    para.id_etape_1 = id;
+	    para.id_etape_2 = 0;
+	    para.id_etape_3 = 0;	    
+	    para.id_etape_4 = 0;
+	    
+	    
+	    this.parametres = para;
+	    console.log("PARAMETRE before : " + this.parametres)
+	    localStorage.setItem('parametres', JSON.stringify(this.parametres));
+		
+		this.parametres = JSON.parse(localStorage.getItem('parametres') || "[]") ;
+		
+		console.log("PARAMETRE PAGE 1 : " + this.parametres)
 	}
 	,
 	initSelectEtape: function(id,file,event)
@@ -150,10 +173,9 @@ console.log("TAILLe : " + paths.length)
 		}
 		
 				
-		if (para.id_etape_1 == 0) para.id_etape_1 = 1;
-		para.id_etape_1 = 1;
+		para.id_etape_1 = 0;
 		var file = this.getFormByid(para.id_etape_1)
-		this.loadSvg(file)
+		if (file != '') this.loadSvg(file)
 		this.isLoad = true;
 	}
 	,
@@ -169,6 +191,8 @@ console.log("TAILLe : " + paths.length)
 		var svg_el =  document.querySelector('.preview-element #forme_vetement');
 		
 		switch(file) {
+			case 'logo' : initPara = new Array();
+					 break;
 			case 'tshirt' : initPara = this.base_tshirt;
 					 break;
 			case 'debardeur' : initPara = this.base_debardeur;
@@ -178,6 +202,8 @@ console.log("TAILLe : " + paths.length)
 			case 'polo' : initPara = this.base_polo;
 					 break;
 		}
+		
+		
 		
 		setTimeout(function() {
 			for (var i=0;i<initPara.length;i++) {
@@ -192,6 +218,8 @@ console.log("TAILLe : " + paths.length)
 	getFormByid: function(id) {
 		var form = '';
 		switch(id) {
+			case 0 : form = '';
+					 break;
 			case 1 : form = 'tshirt';
 					 break;
 			case 2 : form = 'debardeur';
@@ -207,7 +235,7 @@ console.log("TAILLe : " + paths.length)
 	,
 	initPara() {
 	  	var para = new Object();
-	    para.id_etape_1 = 1;
+	    para.id_etape_1 = 0;
 	    para.id_etape_2 = 0;
 	    para.id_etape_3 = 0;	    
 	    para.id_etape_4 = 0;
@@ -234,6 +262,11 @@ console.log("TAILLe : " + paths.length)
 			paths[i].classList.remove('active')
 		}
 	}
+	,
+		async logout() {
+	      await this.$auth.logout();
+	      this.$router.push('/login')
+	    }
   }
 }
 </script>
