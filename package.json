@@ -1,0 +1,33 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/auth": "4.9.1",
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@openafg/nuxt-fullpage": "^1.0.5",
+    "@tailwindcss/forms": "^0.3.3",
+    "core-js": "^3.9.1",
+    "moment": "^2.29.1",
+    "nuxt": "^2.15.3",
+    "one-colorpicker": "^1.0.12",
+    "redirect-ssl": "^3.0.0",
+    "tone": "^14.7.77",
+    "v-calendar": "^2.4.1",
+    "vue-marquee-text-component": "^1.2.0",
+    "vue-quill": "^1.5.1",
+    "vue-quill-editor": "^3.0.6",
+    "vuedraggable": "^2.24.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^4.0.1",
+    "postcss": "^8.2.8"
+  }
+}

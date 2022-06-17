@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43.897" height="22.886" viewBox="0 0 43.897 22.886">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1905" data-name="Rectangle 1905" width="43.897" height="22.886" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="illu_marine" transform="translate(0 0)">
+    <path id="Tracé_440" data-name="Tracé 440" d="M36.507,7.832v7.223l7.141,7.223V.609Z" fill="#fff"/>
+    <g id="Groupe_811" data-name="Groupe 811">
+      <g id="Groupe_810" data-name="Groupe 810" clip-path="url(#clip-path)">
+        <path id="Tracé_441" data-name="Tracé 441" d="M36.507,15.055l7.141,7.222V.608L36.507,7.832Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+      </g>
+    </g>
+    <path id="Tracé_442" data-name="Tracé 442" d="M36.507,11.425h0Z" fill="#fff"/>
+    <g id="Groupe_813" data-name="Groupe 813">
+      <g id="Groupe_812" data-name="Groupe 812" clip-path="url(#clip-path)">
+        <line id="Ligne_122" data-name="Ligne 122" x2="7.141" transform="translate(36.507 11.424)" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+      </g>
+    </g>
+    <path id="Tracé_443" data-name="Tracé 443" d="M.323,11.365l7.295,7.4h7.215l14.409.032,7.2-3.639V7.9L29.164.709H14.833l-7.215,0Z" fill="#fff"/>
+    <g id="Groupe_815" data-name="Groupe 815">
+      <g id="Groupe_814" data-name="Groupe 814" clip-path="url(#clip-path)">
+        <path id="Tracé_444" data-name="Tracé 444" d="M36.446,7.9h0L29.165.709H14.833L7.619.7l-7.3,10.66,7.3,7.4h7.214l14.409.032,7.2-3.639Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+        <path id="Tracé_445" data-name="Tracé 445" d="M9.031,5.107a1.413,1.413,0,1,0,1.412,1.412A1.412,1.412,0,0,0,9.031,5.107" fill="#040405"/>
+        <path id="Tracé_446" data-name="Tracé 446" d="M9.031,5.107a1.413,1.413,0,1,0,1.412,1.412A1.412,1.412,0,0,0,9.031,5.107Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+        <line id="Ligne_123" data-name="Ligne 123" y2="18.054" transform="translate(14.833 0.708)" fill="#fff"/>
+        <line id="Ligne_124" data-name="Ligne 124" y2="18.054" transform="translate(14.833 0.708)" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+        <path id="Tracé_447" data-name="Tracé 447" d="M29.235,7.932v7.225l-7.246-3.614Z" fill="#fff"/>
+        <path id="Tracé_448" data-name="Tracé 448" d="M29.235,7.932v7.225l-7.246-3.614Z" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="0.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

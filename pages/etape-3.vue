@@ -1,0 +1,253 @@
+<template>
+
+  <div class="container">
+	  <div class="grid">
+	 	<div class="elements"></div>
+ 	</div>
+ 	
+ 	<div class="content">
+	 	<header>
+	 		<div class="logo">MADE BY YOU</div>
+	 		<div class="like"><img class="img-logo" src="~/assets/img/like.svg" alt="Made by you" /></div>
+	 	</header>
+	 	
+	 	<div class="content-made">
+		 	<div class="content-made-left">
+			 	<div class="preview-content">
+				 	<div class="preview-corner-top"></div>
+			 		<div class="preview">
+				 		<div v-show="isLoad" class="preview-element" v-html="imgPreview"></div>
+				 		<div v-show="isAnim" class="anim"></div>
+			 		</div>
+			 		<div class="preview-corner-bottom"></div>
+			 	</div>
+			 	
+			 	<div class="preview-nav">
+				 	<div><nuxt-link to="etape-1">1</nuxt-link></div>
+				 	<div><nuxt-link to="etape-1">2</nuxt-link></div>
+				 	<div class="active">3</div>
+				 	<div>4</div>
+			 	</div>
+		 	</div>
+		 	<div class="content-made-right etape3">
+			 	
+			 	<div class="infos"><div>…puis sélectionnez la couleur que vous souhaitez lui attribuer :</div></div>
+			 	<div class="choix cursor-pointer">
+
+					 	<div>
+						 	<div @click="etape('#fff')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/1.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#f0846c')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/2.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#ea7f7f')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/3.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#ce2c2c')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/4.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#e67c00')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/5.svg" alt="Made by you" /></div></div>
+					 	</div>
+					 	
+					 	<div>
+						 	<div @click="etape('#fdce4e')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/6.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#ffef74')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/7.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#dbef45')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/8.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#a7c30f')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/9.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#6a9b40')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/10.svg" alt="Made by you" /></div></div>
+					 	</div>
+					 	
+					 	<div>
+						 	<div @click="etape('#3d7e6a')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/11.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#213279')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/12.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#649cb1')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/13.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#c4e3f7')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/14.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#a32979')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/15.svg" alt="Made by you" /></div></div>
+					 	</div>
+					 	
+					 	<div>
+						 	<div @click="etape('#8b103f')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/16.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#503014')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/17.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#894f15')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/18.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#45423c')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/19.svg" alt="Made by you" /></div></div>
+						 	<div @click="etape('#000000')"><img src="/upload/color/bords.svg" alt="Made by you" /> <div class="figure"><img src="/upload/color/20.svg" alt="Made by you" /></div></div>
+					 	</div>
+				 	
+				 	
+
+				</div>
+				<div class="preview-nav">
+				 	<div class="type-bt"><nuxt-link to="etape-4">Valider</nuxt-link></div>
+			 	</div>
+		 	</div>
+	 	</div>
+ 	</div>
+
+  </div>
+</template>
+
+<script>
+export default {
+	layout: 'default',
+	data() {
+    return {
+	    g_width: 0,
+		g_height: 0,
+	    isEn:true,
+	    isSoon:false,
+	    isAnim:false,
+	    isLoad:false,
+	    imgPreview:'/upload/svg/t-shirt.svg',
+	    id_etape_1:0,
+	    id_etape_2:0,
+	    parametres:'',
+	    base_tshirt:new Array('forme_vetement','manche1','manche2','couture3'),
+	    base_debardeur:new Array('forme_vetement','couture1','couture2','couture3'),
+	    base_chemise:new Array('forme_vetement','manche1','manche2','col_chemise','couture1','couture2','couture3','boutons_ronds'),
+	    base_polo:new Array('forme_vetement','col_polo','manche1','manche2','couture1','couture2','boutons'),
+    }
+  },
+  mounted() {
+	this.parametres = JSON.parse(localStorage.getItem('parametres') || "[]") ;
+	this.loadEtape();
+	this.getDimensions();
+	//window.addEventListener('resize', this.getDimensions);
+  }
+  ,
+  unmounted() {
+    //window.removeEventListener('resize', this.getDimensions);
+  }
+  ,
+   methods: {
+	getDimensions() {
+      this.g_width = document.querySelector('.grid').clientWidth;
+      this.g_height = document.querySelector('.grid').clientHeight;
+      
+      this.displayGrid();
+    }
+    ,
+	displayGrid: function() {
+		var col = '';
+		var grid_elements = document.querySelector('.grid .elements')
+		var coef = this.vwTOpx(1.5);
+		console.log("val : " + this.g_width / coef)
+		for (var i=0;i<(this.g_width / coef);i++) {
+			for (var j=0;j<(this.g_width / coef);j++) {
+				col += '<div></div>';
+			}
+		}
+		
+		grid_elements.innerHTML = col;
+       
+    },
+    vwTOpx(value) {
+	  var w = window;
+	  var d = document;
+	  var e = d.documentElement;
+	  var g = d.getElementsByTagName('body')[0];
+	  var x = w.innerHeight || e.clientHeight || g.clientHeight;
+	 
+	  var result = (x*value)/100;
+	  return(result);
+	}
+	,
+	etape: function(couleur)
+	{
+		document.querySelector('.selectPath').style.fill = couleur;
+	}
+	,
+	loadEtape: function() {
+		var para = this.parametres;
+		if (para.id_etape_1 == 0) para.id_etape_1 = 1;
+		this.id_etape_1 = para.id_etape_1
+		var file = this.getFormByid(this.id_etape_1)
+		this.loadSvg(file)
+		this.isLoad = true;
+	}
+	,
+	validEtape: function() {
+		
+	}
+	,
+	loadSvg: function(file) {
+		
+		document.querySelector('.preview-element').innerHTML = this.parametres.id_etape_2;
+		
+		
+		/*document.querySelector('.preview-element').classList.add('loading');
+		
+		this.imgPreview = document.querySelector('#Model-' + file).innerHTML;
+		var initPara = new Array();
+		var svg_el =  document.querySelector('.preview-element #forme_vetement');
+		
+		switch(file) {
+			case 'tshirt' : initPara = this.base_tshirt;
+					 break;
+			case 'debardeur' : initPara = this.base_debardeur;
+					 break;
+			case 'chemise' : initPara = this.base_chemise;
+					 break;
+			case 'polo' : initPara = this.base_polo;
+					 break;
+		}*/
+		
+		setTimeout(function() {
+			let paths = document.getElementsByTagName('path')
+
+			//now we can loop over the array and add an eventlistener to each path in the array
+			// it listens to the 'click' event and then runs function toggleClass()
+			for(let i=0; i<paths.length; i++){
+				paths[i].style.fill="#fff";
+				paths[i].classList.add('activePath')
+			    paths[i].addEventListener('click', selectPath)
+			}
+			
+			// In the function toggleClass we can toggle the 'clicked' class.
+			function selectPath() {
+				initSelectPath();
+			    this.classList.toggle('selectPath')
+			    console.log("cclic path")
+			}
+			
+			function initSelectPath() {
+			    for(let i=0; i<paths.length; i++){
+			    	paths[i].classList.remove('selectPath')
+			    }
+			}
+		}, 1000);
+		
+	}
+	,
+	getFormByid: function(id) {
+		var form = '';
+		switch(id) {
+			case 1 : form = 'tshirt';
+					 break;
+			case 2 : form = 'debardeur';
+					 break;
+			case 3 : form = 'chemise';
+					 break;
+			case 4 : form = 'polo';
+					 break;
+		}
+		
+		return form;
+	}
+	,
+	initPara() {
+	  	var para = new Object();
+	    para.id_etape_1 = 1;
+	    para.id_etape_2 = 0;
+	    para.id_etape_3 = 0;	    
+	    para.id_etape_4 = 0;
+	    
+	    
+	    this.parametres = para;
+	    localStorage.setItem('parametres', JSON.stringify(this.parametres));
+	}
+	
+  }
+}
+
+</script>
+
+
+
+<style scoped>
+
+</style>
+
+

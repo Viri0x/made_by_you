@@ -1,0 +1,107 @@
+[
+  {
+    "name": "edit",
+    "path": "/edit",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/edit/index.vue",
+    "chunkName": "pages/edit/index",
+    "_name": "_51fc58e4"
+  },
+  {
+    "name": "etape-1",
+    "path": "/etape-1",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/etape-1.vue",
+    "chunkName": "pages/etape-1",
+    "_name": "_600c2dba"
+  },
+  {
+    "name": "etape-2",
+    "path": "/etape-2",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/etape-2.vue",
+    "chunkName": "pages/etape-2",
+    "_name": "_601a453b"
+  },
+  {
+    "name": "etape-3",
+    "path": "/etape-3",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/etape-3.vue",
+    "chunkName": "pages/etape-3",
+    "_name": "_60285cbc"
+  },
+  {
+    "name": "etape-4",
+    "path": "/etape-4",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/etape-4.vue",
+    "chunkName": "pages/etape-4",
+    "_name": "_6036743d"
+  },
+  {
+    "name": "edit-confirmRegister",
+    "path": "/edit/confirmRegister",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/edit/confirmRegister.vue",
+    "chunkName": "pages/edit/confirmRegister",
+    "_name": "_d69cf282"
+  },
+  {
+    "name": "edit-interviews",
+    "path": "/edit/interviews",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/edit/interviews/index.vue",
+    "chunkName": "pages/edit/interviews/index",
+    "_name": "_19ae0809"
+  },
+  {
+    "name": "edit-login",
+    "path": "/edit/login",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/edit/login.vue",
+    "chunkName": "pages/edit/login",
+    "_name": "_bead12b6"
+  },
+  {
+    "name": "edit-register",
+    "path": "/edit/register",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/edit/register.vue",
+    "chunkName": "pages/edit/register",
+    "_name": "_26f6e417"
+  },
+  {
+    "name": "edit-resetPassword",
+    "path": "/edit/resetPassword",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/edit/resetPassword.vue",
+    "chunkName": "pages/edit/resetPassword",
+    "_name": "_60bbe7c6"
+  },
+  {
+    "name": "edit-settings",
+    "path": "/edit/settings",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/edit/settings/index.vue",
+    "chunkName": "pages/edit/settings/index",
+    "_name": "_70a92a4c"
+  },
+  {
+    "name": "edit-users",
+    "path": "/edit/users",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/edit/users/index.vue",
+    "chunkName": "pages/edit/users/index",
+    "_name": "_0a47d147"
+  },
+  {
+    "name": "edit-interviews-form",
+    "path": "/edit/interviews/form",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/edit/interviews/form.vue",
+    "chunkName": "pages/edit/interviews/form",
+    "_name": "_47d727dd"
+  },
+  {
+    "name": "edit-users-form",
+    "path": "/edit/users/form",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/edit/users/form.vue",
+    "chunkName": "pages/edit/users/form",
+    "_name": "_68603edf"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_52799c3e"
+  }
+]
