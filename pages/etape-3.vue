@@ -17,14 +17,14 @@
 				 	<div class="preview-corner-top"></div>
 			 		<div class="preview">
 				 		<div v-show="isLoad" class="preview-element" v-html="imgPreview"></div>
-				 		<div class="anim isHidden"><video id="myVideo" autoplay muted><source src="/upload/anim/BETTERAVE.webm" type="video/webm"></video></div>
+				 		<div class="anim isHidden"><video id="myVideo" autoplay muted><source src="/upload/anim/15.webm" type="video/webm"></video></div>
 			 		</div>
 			 		<div class="preview-corner-bottom"></div>
 			 	</div>
 			 	
 			 	<div class="preview-nav">
-				 	<div><nuxt-link to="etape-1">1</nuxt-link></div>
-				 	<div><nuxt-link to="etape-1">2</nuxt-link></div>
+				 	<div><nuxt-link to="/etape-1">1</nuxt-link></div>
+				 	<div><nuxt-link to="/etape-1">2</nuxt-link></div>
 				 	<div class="active">3</div>
 				 	<div>4</div>
 			 	</div>
@@ -70,7 +70,7 @@
 
 				</div>
 				<div class="preview-nav valid" @mouseleave='hideActiveValidT'>
-					<div @mouseover='displayActiveValidT'  class="type-bt"><nuxt-link to="/etape-4">Valider</nuxt-link></div>
+					<div @mouseover='displayActiveValidT'  class="type-bt cursor-pointer" @click="validEtape()">Valider</div>
 					<div class="zone_carre carre_tf"></div>
 					<div class="zone_carre carre_tr"></div>
 					
@@ -90,7 +90,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-
+var couleurFin;
 export default {
 	middleware: 'auth',
    computed: {
@@ -170,9 +170,9 @@ export default {
 		}
 
 		if (isSelected) {
-			this.playVideo(video)
+			this.playVideo(video,couleur)
 			this.initCouleur();
-			document.querySelector('.selectPath').style.fill = couleur;
+			
 			event.target.parentNode.style.backgroundColor = couleur;
 		}		
 		else {
@@ -184,13 +184,14 @@ export default {
 		localStorage.setItem('parametres', JSON.stringify(this.parametres));
 	}
 	,
-	playVideo(index) {
+	playVideo(index,couleur) {
 		var vid = document.getElementById("myVideo");
+		couleurFin = couleur;
 		var _this = this 
-		console.log("this1 : " + _this)
 		vid.onended = function(_this, event) {
-			console.log("this2 : " + _this)
 		    _this.isAnim = false;
+		    console.log("couleur : " + couleurFin);
+		    document.querySelector('.selectPath').style.fill = couleurFin;
 		    document.querySelector('.anim').classList.add('isHidden')
 		};
 		if (this.isAnim) {
@@ -224,7 +225,10 @@ export default {
 	}
 	,
 	validEtape: function() {
+		this.parametres.id_etape_3 = document.querySelector('.preview-element').innerHTML;
+		localStorage.setItem('parametres', JSON.stringify(this.parametres));
 		
+		document.location = '/etape-4';
 	}
 	,
 	loadSvg: function(file) {

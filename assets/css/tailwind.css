@@ -50,6 +50,24 @@ select:-webkit-autofill:focus {
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Anek Latin';
+    src: url('~/assets/fonts/AnekLatin-Medium.woff2') format('woff2'),
+        url('~/assets/fonts/AnekLatin-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rigatoni';
+    src: url('~/assets/fonts/Rigatoni.woff2') format('woff2'),
+        url('~/assets/fonts/Rigatoni.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 
 
@@ -1130,7 +1148,7 @@ select:-webkit-autofill:focus {
 	}
 	
 	.mainSite .content-made .content-made-right.etape4 .choix .zone_1 > div > div {
-		margin-right:calc(2 * var(--size_square));
+		margin-right:calc(2 * var(--size_square) - 1px);
 	}
 	
 	.mainSite .content-made .content-made-right.etape4 .choix .zone_1 > div > div:last-child {
@@ -1139,8 +1157,8 @@ select:-webkit-autofill:focus {
 	
 	.mainSite .content-made .content-made-right.etape4 .choix .zone_1 > div > div {
 		@apply relative bg-mainBg border border-mainColor;
-		width:calc(3 * var(--size_square));
-		height:calc(5 * var(--size_square));
+		width:calc(3 * var(--size_square) + 1px);
+		height:calc(5 * var(--size_square) + 1px);
 	}
 	
 	.mainSite .content-made .content-made-right.etape4 .choix .zone_1 > div > div > div:first-child {
@@ -1151,8 +1169,76 @@ select:-webkit-autofill:focus {
 	.mainSite .content-made .content-made-right.etape4 .choix .zone_1 > div > div > div:last-child {
 		@apply flex justify-center items-center text-center h-1/2;
 	}
-
 	
+	.mainSite .content-made .content-made-right.etape4 .choix .zone_2 {
+		@apply w-full;
+		margin-top:calc(2 * var(--size_square) - 1px);
+	}
+	
+	.mainSite .content-made .content-made-right.etape4 .choix .zone_2 > div {
+		@apply w-full flex  items-center;
+	}
+	
+	.mainSite .content-made .content-made-right.etape4 .choix .zone_2 > div > div {
+		@apply relative bg-mainBg border border-mainColor flex justify-center items-center;
+		width:calc(5 * var(--size_square) + 1px);
+		height:calc(2 * var(--size_square) + 1px);
+		margin-right:calc(1 * var(--size_square) - 1px);
+	}
+	
+	.mainSite .content-made .content-made-right.etape4 .choix .zone_2 > div > div:last-child {
+		margin-right:0;
+	}
+	
+	.mainSite .content-made .content-made-right.etape4 .choix .zone_3 {
+		@apply w-full;
+		margin-top:calc(2 * var(--size_square) - 1px);
+	}
+	
+	.mainSite .content-made .content-made-right.etape4 .choix .zone_3 > div {
+		@apply w-full flex  items-center;
+	}
+	
+	.mainSite .content-made .content-made-right.etape4 .choix .zone_3 > div > div {
+		@apply relative bg-mainBg border border-mainColor flex justify-center items-center;
+		width:calc(7 * var(--size_square) + 1px);
+		height:calc(2 * var(--size_square) + 2px);
+		margin-left:calc(8 * var(--size_square));
+	}
+	
+	.mainSite .content-made .content-made-right.etape4 .choix .zone_3 input {
+		@apply w-full p-2;
+	}
+	
+	.mainSite .content-made .content-made-right.etape4 .choix .zone_3 input:focus {
+	   color: #000;
+	  background-color: #fff;
+	  border-color: #000;
+	   outline:none;
+		outline-color: #fff !important;
+		outline-border:0px;
+  	}
+
+
+	.font_1 {
+		font-family: 'LoRes 9 OT Narrow';
+		font-size:14px;
+	}
+	
+	.font_2 {
+		font-family: 'IBMPlexSans-Regular';
+		font-size:14px;
+	}
+	
+	.font_3 {
+		font-family: 'Anek Latin';
+		font-size:14px;
+	}
+	
+	.font_4 {
+		font-family: 'Rigatoni';
+		font-size:14px;
+	}
 	  
 	.mainSite .grid {
 		width: 110%;
@@ -1192,6 +1278,17 @@ select:-webkit-autofill:focus {
 		width:var(--size_square);
 		height:var(--size_square);
 	}
+	
+	.zone_2 .selected {
+		border:2px solid #000 !important;
+	}
+	
+	.preview-element #texte {
+	}
+	
+	.draggable {
+  cursor: move;
+}
 }
 
 @keyframes slideDown {

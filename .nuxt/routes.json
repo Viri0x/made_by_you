@@ -1,5 +1,12 @@
 [
   {
+    "name": "end",
+    "path": "/end",
+    "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/end.vue",
+    "chunkName": "pages/end",
+    "_name": "_951851ac"
+  },
+  {
     "name": "etape-1",
     "path": "/etape-1",
     "component": "/Users/christophesalaun/Documents/www/diplome_2022/made_by_you_new/pages/etape-1.vue",

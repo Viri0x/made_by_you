@@ -23,7 +23,7 @@
 			 	</div>
 			 	
 			 	<div class="preview-nav">
-				 	<div><nuxt-link to="etape-1">1</nuxt-link></div>
+				 	<div><nuxt-link to="/etape-1">1</nuxt-link></div>
 				 	<div class="active">2</div>
 				 	<div>3</div>
 				 	<div>4</div>
@@ -36,32 +36,32 @@
 				 	
 				 	<div v-show="id_etape_1 == 1">
 					 	<div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colV','colV'),new Array('forme_vetement','col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />en V</div><div class="figureSVG"><img src="/upload/svg/colV.svg" @click="validAction($event);" alt="Made by you" /></div></div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colclaudine','colclaudine'),new Array('forme_vetement','col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />Claudine</div><div class="figureSVG"><img src="/upload/svg/colclaudine.svg" @click="validAction($event);" alt="Made by you" /></div></div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('col_boutons'),new Array())"><div @mouseover='displayActiveValid($event)'>Col<br />3 boutons</div><div class="figureSVG"><img src="/upload/svg/bouton.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colV','colV'),new Array('forme_vetement','col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />en V</div><div class="figureSVG initCol1"><img src="/upload/svg/colV.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colclaudine','colclaudine'),new Array('forme_vetement','col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />Claudine</div><div class="figureSVG initCol2"><img src="/upload/svg/colclaudine.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('col_boutons','forme_vetement'),new Array())"><div @mouseover='displayActiveValid($event)'>Col<br />3 boutons</div><div class="figureSVG initCol3"><img src="/upload/svg/bouton.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 					 	</div>
 					 	
 					 	<div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colmontant','colmontant'),new Array('forme_vetement','col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />montant</div><div class="figureSVG"><img src="/upload/svg/colroule.svg" @click="validAction($event);" alt="Made by you" /></div></div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('couture1','couture2'),new Array())"><div @mouseover='displayActiveValid($event)'>Coutures<br />manches</div><div class="figureSVG"><img src="/upload/svg/manchegauche.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('forme_tshirt_colmontant','colmontant'),new Array('forme_vetement','col_rond'))"><div @mouseover='displayActiveValid($event)'>Col<br />montant</div><div class="figureSVG initCol4"><img src="/upload/svg/colroule.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('couture1','couture2'),new Array())"><div @mouseover='displayActiveValid($event)'>Coutures<br />manches</div><div class="figureSVG initManche1"><img src="/upload/svg/manchegauche.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('poche'),new Array())"><div @mouseover='displayActiveValid($event)'>Petite<br />poches</div><div class="figureSVG"><img src="/upload/svg/petitepoche.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 					 	</div>
 					 	
 					 	<div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('manche_ballons1','manche_ballons2'),new Array('manche1','manche2'))"><div @mouseover='displayActiveValid($event)'>Manches<br />ballon</div><div class="figureSVG"><img src="/upload/svg/mancheballonG.svg" @click="validAction($event);" alt="Made by you" /></div></div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('manche_volants1','manche_volants2'),new Array('manche1','manche2'))"><div @mouseover='displayActiveValid($event)'>Manches<br />à volants</div><div class="figureSVG"><img src="/upload/svg/manchevolantG.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('manche_ballons1','manche_ballons2'),new Array('manche1','manche2'))"><div @mouseover='displayActiveValid($event)'>Manches<br />ballon</div><div class="figureSVG initManche2"><img src="/upload/svg/mancheballonG.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_1(new Array('manche_volants1','manche_volants2'),new Array('manche1','manche2'))"><div @mouseover='displayActiveValid($event)'>Manches<br />à volants</div><div class="figureSVG initManche3"><img src="/upload/svg/manchevolantG.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 					 	</div>
 				 	</div>
 				 	
 				 	<div v-show="id_etape_1 == 2">
 					 	<div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('forme_debardeur_colV'),new Array())"><div @mouseover='displayActiveValid($event)'>Col<br />en V</div><div class="figureSVG"><img src="/upload/svg/colV.svg" @click="validAction($event);" alt="Made by you" /></div></div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('col_boutons'),new Array())"><div @mouseover='displayActiveValid($event)'>Col<br />3 boutons</div><div class="figureSVG"><img src="/upload/svg/bouton.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_2(new Array('colV','forme_debardeur_colV'),new Array())"><div @mouseover='displayActiveValid($event)'>Col<br />en V</div><div class="figureSVG"><img src="/upload/svg/colV.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCol_2(new Array('col_boutons'),new Array())"><div @mouseover='displayActiveValid($event)'>Col<br />3 boutons</div><div class="figureSVG"><img src="/upload/svg/bouton.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array(),new Array('couture1','couture2','couture3'))"><div @mouseover='displayActiveValid($event)'>Sans<br />couture</div><div class="figureSVG"><img src="/upload/svg/sanscouture_debardeur.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 					 	</div>
 					 	
 					 	<div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('forme_debardeur_bretelles_fines','col_fond_bretelles_fines'),new Array())"><div @mouseover='displayActiveValid($event)'>Bretelles<br />fines</div><div class="figureSVG"><img src="/upload/svg/bretellesfines.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('forme_debardeur_bretelles_fines','col_fond_bretelles_fines'),new Array('forme_vetement'))"><div @mouseover='displayActiveValid($event)'>Bretelles<br />fines</div><div class="figureSVG"><img src="/upload/svg/bretellesfines.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 						 	<div @mouseleave='hideActiveValid($event)' @click="etape(new Array('poche'),new Array())"><div @mouseover='displayActiveValid($event)'>Petite<br />poche</div><div class="figureSVG"><img src="/upload/svg/petitepoche.svg"  @click="validAction($event);" alt="Made by you" /></div></div>
 					 	</div>
 				 	</div>
@@ -93,8 +93,8 @@
 					 	</div>
 					 	
 					 	<div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeBouton_4(new Array('boutons_carres','boutons_carrés_colclaudine'),new Array('boutons'))"><div @mouseover='displayActiveValid($event)'>Boutons<br />carré</div><div class="figureSVG"><img src="/upload/svg/boutoncarre.svg" @click="validAction($event);" alt="Made by you" /></div></div>
-						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeBouton_4(new Array('boutons_triangle','boutons_triangle_colclaudine'),new Array('boutons'))"><div @mouseover='displayActiveValid($event)'>Boutons<br />triangle</div><div class="figureSVG"><img src="/upload/svg/boutontriangle.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeBouton_4(new Array('boutons_carres'),new Array())"><div @mouseover='displayActiveValid($event)'>Boutons<br />carré</div><div class="figureSVG"><img src="/upload/svg/boutoncarre.svg" @click="validAction($event);" alt="Made by you" /></div></div>
+						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeBouton_4(new Array('boutons_triangle'),new Array())"><div @mouseover='displayActiveValid($event)'>Boutons<br />triangle</div><div class="figureSVG"><img src="/upload/svg/boutontriangle.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 						 	<div @mouseleave='hideActiveValid($event)' @click="etapeBeforeCouture_4(new Array(),new Array('couture1','couture2'))"><div @mouseover='displayActiveValid($event)'>Sans<br />couture</div><div class="figureSVG"><img src="/upload/svg/sanscouture_polo.svg" @click="validAction($event);" alt="Made by you" /></div></div>
 					 	</div>
 				 	</div>
@@ -149,7 +149,6 @@ export default {
   },
   mounted() {
 	this.parametres = JSON.parse(localStorage.getItem('parametres') || "[]") ;
-	console.log("PARAMETRES : " + this.parametres)
 	this.loadEtape();
 	this.getDimensions();
 	window.addEventListener('resize', this.getDimensions);
@@ -221,6 +220,11 @@ export default {
 		if (para[0] == 'forme_tshirt_colV') {
 			document.querySelector('.preview-element #forme_tshirt_colclaudine').style.display = "none";
 			document.querySelector('.preview-element #forme_tshirt_colmontant').style.display = "none";
+			document.querySelector('.preview-element #forme_vetement').style.display = "none";
+			
+			this.initCol('2');
+			this.initCol('3');
+			this.initCol('4');
 		}
 		
 		if (para[0] == 'forme_tshirt_colclaudine') {
@@ -228,6 +232,13 @@ export default {
 			document.querySelector('.preview-element #forme_tshirt_colV').style.display = "none";
 			document.querySelector('.preview-element #colmontant').style.display = "none";
 			document.querySelector('.preview-element #colV').style.display = "none";
+			
+			document.querySelector('.preview-element #col_boutons').style.display = "none";
+			document.querySelector('.preview-element #forme_vetement').style.display = "none";
+			
+			this.initCol('1');
+			this.initCol('3');
+			this.initCol('4');
 			
 			//colV colmontant colclaudine
 		}
@@ -237,7 +248,28 @@ export default {
 			document.querySelector('.preview-element #forme_tshirt_colV').style.display = "none";
 
 			document.querySelector('.preview-element #colclaudine').style.display = "none";
-			document.querySelector('.preview-element #colV').style.display = "none";		}
+			document.querySelector('.preview-element #colV').style.display = "none";		
+			document.querySelector('.preview-element #col_boutons').style.display = "none";
+			document.querySelector('.preview-element #forme_vetement').style.display = "none";
+			
+			this.initCol('1');
+			this.initCol('2');
+			this.initCol('3');
+		}
+			
+		if (para[0] == 'col_boutons') {
+			document.querySelector('.preview-element #forme_tshirt_colclaudine').style.display = "none";
+			document.querySelector('.preview-element #forme_tshirt_colV').style.display = "none";
+			document.querySelector('.preview-element #forme_tshirt_colmontant').style.display = "none";
+
+			document.querySelector('.preview-element #colclaudine').style.display = "none";
+			document.querySelector('.preview-element #colmontant').style.display = "none";
+			document.querySelector('.preview-element #colV').style.display = "none";
+			
+			this.initCol('1');
+			this.initCol('2');
+			this.initCol('4');		
+		}
 		
 		if (para[0] == 'forme_tshirt_colV') {
 			document.querySelector('.preview-element #forme_tshirt_colclaudine').style.display = "none";
@@ -256,7 +288,8 @@ export default {
 			
 			document.querySelector('.preview-element #manche1').style.display = "block";
 			document.querySelector('.preview-element #manche2').style.display = "block";
-			
+			this.initManche('2')
+			this.initManche('3')
 			
 		}
 		
@@ -265,6 +298,8 @@ export default {
 			document.querySelector('.preview-element #couture2').style.display = "none";
 			document.querySelector('.preview-element #manche_volants1').style.display = "none";
 			document.querySelector('.preview-element #manche_volants2').style.display = "none";
+			this.initManche('1')
+			this.initManche('3')
 		}
 		
 		if (para[0] == 'manche_volants1') {
@@ -272,41 +307,86 @@ export default {
 			document.querySelector('.preview-element #manche_ballons2').style.display = "none";
 			document.querySelector('.preview-element #couture1').style.display = "none";
 			document.querySelector('.preview-element #couture2').style.display = "none";
+			this.initManche('1')
+			this.initManche('2')
 		}
 		
 		this.etape(para,para_int);
 	}
 	,
 	etapeBeforeCouture_4: function(para,para_int) {
+		console.log("etapeBeforeCouture_4")
 			if (document.querySelector('.preview-element #manche_ballons1').style.display == "block") {
+				console.log("etapeBeforeCouture_4 IN")
 				document.querySelector('.preview-element #manche_ballons1').style.display = "none";
 				document.querySelector('.preview-element #manche_ballons2').style.display = "none";
+				
 				document.querySelector('.preview-element #manche1').style.display = "block";
 				document.querySelector('.preview-element #manche2').style.display = "block";
+				document.querySelector('.preview-element #couture1').style.display = "none";
+				document.querySelector('.preview-element #couture2').style.display = "none";
+				
+				para_int = new Array();
+				
+			}
+			else {
+				this.etape(para,para_int);
 			}
 			
+			
+			
 		
-		this.etape(para,para_int);
+		
 	}
 	,
 	etapeBeforeCol_4: function(para,para_int) {
 		if (para[0] == 'colclaudine') {
 			if (document.querySelector('.preview-element #boutons').style.display == "block") {
-				//document.querySelector('.preview-element #boutons').style.display = "none";
-				//document.querySelector('.preview-element #boutons_ronds_colclaudine').style.display = "block";
+				document.querySelector('.preview-element #boutons').style.display = "none";
+				document.querySelector('.preview-element #boutons_colclaudine').style.display = "block";
 			}
 			
 			if (document.querySelector('.preview-element #boutons_carres').style.display == "block") {
 				document.querySelector('.preview-element #boutons_carres').style.display = "none";
 				document.querySelector('.preview-element #boutons_carrés_colclaudine').style.display = "block";
+				document.querySelector('.preview-element #boutons_colclaudine').style.display = "none";
 			}
 			
 			if (document.querySelector('.preview-element #boutons_triangle').style.display == "block") {
 				document.querySelector('.preview-element #boutons_triangle').style.display = "none";
 				document.querySelector('.preview-element #boutons_triangle_colclaudine').style.display = "block";
+				document.querySelector('.preview-element #boutons_colclaudine').style.display = "none";
 			}
 			
+			if (document.querySelector('.preview-element #colclaudine').style.display == "block") {
+				
+				if (document.querySelector('.preview-element #boutons_colclaudine').style.display == "block") {
+					document.querySelector('.preview-element #boutons').style.display = "block";
+				}
+				
+				if (document.querySelector('.preview-element #boutons_carrés_colclaudine').style.display == "block") {
+					document.querySelector('.preview-element #boutons_carres').style.display = "block";
+				}
+				
+				if (document.querySelector('.preview-element #boutons_triangle_colclaudine').style.display == "block") {
+					document.querySelector('.preview-element #boutons_triangle').style.display = "block";
+				}
+				
+					document.querySelector('.preview-element #boutons_colclaudine').style.display = "none";
+					document.querySelector('.preview-element #boutons_carrés_colclaudine').style.display = "none";
+					document.querySelector('.preview-element #boutons_triangle_colclaudine').style.display = "none";
+					
+					
+					
+				}
+			
+			
+			
 		}
+		
+		
+		
+		
 		
 		this.etape(para,para_int);
 	}
@@ -315,7 +395,61 @@ export default {
 		
 		var new_para = new Array();
 		
-		if (para[0] == 'boutons_carres') {
+		if (document.querySelector('.preview-element #colclaudine').style.display == "block") {
+			console.log("CLAUDINE")
+			if (para[0] == 'boutons_carres') {
+				console.log("CARRE")
+				document.querySelector('.preview-element #boutons_triangle_colclaudine').style.display = "none";
+				document.querySelector('.preview-element #boutons_colclaudine').style.display = "none";
+				para[0] = 'boutons_carrés_colclaudine'
+				
+				if (document.querySelector('.preview-element #boutons_carrés_colclaudine').style.display == "block") {
+					document.querySelector('.preview-element #boutons_colclaudine').style.display = "block";
+				}
+			}
+			
+			if (para[0] == 'boutons_triangle') {
+				document.querySelector('.preview-element #boutons_carrés_colclaudine').style.display = "none";
+				document.querySelector('.preview-element #boutons_colclaudine').style.display = "none";
+				para[0] = 'boutons_triangle_colclaudine'
+				
+				if (document.querySelector('.preview-element #boutons_triangle_colclaudine').style.display == "block") {
+					document.querySelector('.preview-element #boutons_colclaudine').style.display = "block";
+				}
+			}
+		}
+		else {
+			if (para[0] == 'boutons_carres') {
+				console.log("CARRE")
+				document.querySelector('.preview-element #boutons_triangle_colclaudine').style.display = "none";
+				document.querySelector('.preview-element #boutons_carrés_colclaudine').style.display = "none";
+				document.querySelector('.preview-element #boutons_colclaudine').style.display = "none";
+				document.querySelector('.preview-element #boutons_triangle').style.display = "none";
+				document.querySelector('.preview-element #boutons').style.display = "none";
+				
+				para[0] = 'boutons_carres'
+				
+				if (document.querySelector('.preview-element #boutons_carres').style.display == "block") {
+					document.querySelector('.preview-element #boutons').style.display = "block";
+				}
+			}
+			
+			if (para[0] == 'boutons_triangle') {
+				document.querySelector('.preview-element #boutons_carrés_colclaudine').style.display = "none";
+				document.querySelector('.preview-element #boutons_triangle_colclaudine').style.display = "none";
+				document.querySelector('.preview-element #boutons_colclaudine').style.display = "none";
+				document.querySelector('.preview-element #boutons_carres').style.display = "none";
+				document.querySelector('.preview-element #boutons').style.display = "none";
+				para[0] = 'boutons_triangle'
+				
+				if (document.querySelector('.preview-element #boutons_triangle').style.display == "block") {
+					document.querySelector('.preview-element #boutons').style.display = "block";
+				}
+			}
+			
+		}
+		
+		/*if (para[0] == 'boutons_carres') {
 			document.querySelector('.preview-element #boutons_triangle').style.display = "none";
 			document.querySelector('.preview-element #boutons_triangle_colclaudine').style.display = "none";
 			
@@ -337,7 +471,7 @@ export default {
 			else {
 				new_para[0] = para[0];
 			}
-		}
+		}*/
 
 		/*var new_para = new Array();
 		
@@ -347,7 +481,7 @@ export default {
 		para = new Array();
 		para = new_para;*/
 		
-		this.etape(new_para,para_int);
+		this.etape(para,para_int);
 	}
 	,
 	etape: function(para,para_int) {
@@ -365,7 +499,6 @@ export default {
 		
 		for (var i=0;i<para.length;i++) {
 			if (sens) {
-				console.log("tito : " + para[i])
 				document.querySelector('.preview-element #' + para[i]).style.display = "block";
 			}
 			else {
@@ -474,7 +607,6 @@ export default {
 	,
 	displayActiveValid(event)
 	{
-		console.log("ROLLL")
 		var el = event.target;
 		var _parent = el.parentNode
 		el.parentNode.querySelector('.figureSVG').classList.add('active');
@@ -492,7 +624,6 @@ export default {
 	{
 		var el = event.target;
 		var _parent = el.parentNode
-		console.log("val = " + event.target.innerHTML)
 		_parent.classList.toggle('valid');
 	}
 	,
@@ -510,12 +641,53 @@ export default {
 		}
 	}
 	,
+	initCol: function(index) {
+		let paths = document.querySelectorAll('.initCol' + index)
+		for(let i=0; i<paths.length; i++){
+			paths[i].classList.remove('active')
+			paths[i].classList.remove('valid')
+		}
+	}
+	,
+	initManche: function(index) {
+		let paths = document.querySelectorAll('.initManche' + index)
+		for(let i=0; i<paths.length; i++){
+			paths[i].classList.remove('active')
+			paths[i].classList.remove('valid')
+		}
+	}
+	,
 		async logout() {
 	      await this.$auth.logout();
 	      this.$router.push('/login')
 	    }
+	,    
+	etapeBeforeCol_2: function(para,para_int) {
+		if (para[0] == 'colV') {
+			document.querySelector('.preview-element #col_boutons').style.display = "none";
+			document.querySelector('.preview-element #forme_vetement').style.display = "none";
+			
+			if (document.querySelector('.preview-element #colV').style.display == "block") {
+					document.querySelector('.preview-element #forme_vetement').style.display = "block";
+				}
+		}
+		if (para[0] == 'col_boutons') {
+			document.querySelector('.preview-element #colV').style.display = "none";
+			document.querySelector('.preview-element #forme_debardeur_colV').style.display = "none";
+			
+			if (document.querySelector('.preview-element #forme_vetement').style.display == "none") {
+				console.log("TITOT")
+					document.querySelector('.preview-element #forme_vetement').style.display = "block";
+				}
+		}
+			
+		this.etape(para,para_int);
+	}
+
   }
 }
+
+
 </script>
 
 <style scoped>

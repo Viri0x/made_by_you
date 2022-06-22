@@ -13,7 +13,7 @@
 	 	
 	 	<div class="content-made">
 		 	<div class="content-made-left">
-			 	<div class="preview-content">
+			 				 	<div class="preview-content">
 				 	<div class="preview-corner-top"></div>
 			 		<div class="preview">
 				 		<div v-show="isLoad" class="preview-element" v-html="imgPreview"></div>
@@ -23,9 +23,9 @@
 			 	</div>
 			 	
 			 	<div class="preview-nav">
-				 	<div><nuxt-link to="etape-1">1</nuxt-link></div>
-				 	<div><nuxt-link to="etape-1">2</nuxt-link></div>
-				 	<div><nuxt-link to="etape-1">3</nuxt-link></div>
+				 	<div><nuxt-link to="/etape-1">1</nuxt-link></div>
+				 	<div><nuxt-link to="/etape-1">2</nuxt-link></div>
+				 	<div><nuxt-link to="/etape-1">3</nuxt-link></div>
 				 	<div class="active">4</div>
 			 	</div>
 		 	</div>
@@ -36,11 +36,26 @@
 
 					 	<div class="zone_1">
 						 	<div>
-							 	<div @click="etape(1,'t-shirt.svg')"><div class="figure"><img src="/upload/motif/1.png" alt="Made by you" /></div><div>M.B.Y</div></div>
-							 	<div @click="etape(1,'t-shirt.svg')"><div class="figure"><img src="/upload/motif/2.png" alt="Made by you" /></div><div>Petits<br>pois</div></div>
-							 	<div @click="etape(1,'t-shirt.svg')"><div class="figure"><img src="/upload/motif/3.png" alt="Made by you" /></div><div>Portée</div></div>
-							 	<div @click="etape(1,'t-shirt.svg')"><div class="figure"><img src="/upload/motif/4.png" alt="Made by you" /></div><div>Spaghe-<br />ttis</div></div>
-							 	<div @click="etape(1,'t-shirt.svg')"><div class="figure"><img src="/upload/motif/5.png" alt="Made by you" /></div><div>V</div></div>
+							 	<div @click="motif(1)"><div class="figure"><img src="/upload/motif/1.png" alt="Made by you" /></div><div>M.B.Y</div></div>
+							 	<div><div class="figure"><img src="/upload/motif/2.png" alt="Made by you" /></div><div>Petits<br>pois</div></div>
+							 	<div><div class="figure"><img src="/upload/motif/3.png" alt="Made by you" /></div><div>Portée</div></div>
+							 	<div><div class="figure"><img src="/upload/motif/4.png" alt="Made by you" /></div><div>Spaghe-<br />ttis</div></div>
+							 	<div><div class="figure"><img src="/upload/motif/5.png" alt="Made by you" /></div><div>V</div></div>
+						 	</div>
+					 	</div>
+					 	
+					 	<div class="zone_2">
+						 	<div>
+							 	<div @click="updateFont(1)" class="font_1 selected">Typo 1</div>
+							 	<div @click="updateFont(2)" class="font_2">Typo 2</div>
+							 	<div @click="updateFont(3)" class="font_3">Typo 3</div>
+							 	<div @click="updateFont(4)" class="font_4">Typo 4</div>
+						 	</div>
+					 	</div>
+					 	
+					 	<div class="zone_3">
+						 	<div>
+							 	<div><input @input="goInitiale(1)" placeholder="vos initiales" name="initiale" id="initiale" value="" /></div>
 						 	</div>
 					 	</div>
 					 	
@@ -49,7 +64,7 @@
 
 				</div>
 				<div class="preview-nav valid" @mouseleave='hideActiveValidT'>
-					<div @mouseover='displayActiveValidT'  class="type-bt"><nuxt-link to="/etape-4">Valider</nuxt-link></div>
+					<div @mouseover='displayActiveValidT' @click="validEtape()" class="type-bt">Valider</div>
 					<div class="zone_carre carre_tf"></div>
 					<div class="zone_carre carre_tr"></div>
 					
@@ -69,7 +84,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-
+var oneTime = false;
 export default {
 	middleware: 'auth',
    computed: {
@@ -94,6 +109,9 @@ export default {
 	    base_debardeur:new Array('forme_vetement','couture1','couture2','couture3'),
 	    base_chemise:new Array('forme_vetement','manche1','manche2','col_chemise','couture1','couture2','couture3','boutons_ronds'),
 	    base_polo:new Array('forme_vetement','col_polo','manche1','manche2','couture1','couture2','boutons'),
+	    id_font:1,
+	    dragOffsetX: null,
+      dragOffsetY: null
     }
   },
   mounted() {
@@ -101,6 +119,8 @@ export default {
 	this.loadEtape();
 	this.getDimensions();
 	window.addEventListener('resize', this.getDimensions);
+	
+	this.updateFont(1);
   }
   ,
   unmounted() {
@@ -157,11 +177,27 @@ export default {
 	}
 	,
 	validEtape: function() {
-		
+		this.parametres.id_etape_4 = document.querySelector('.preview-element').innerHTML;
+		localStorage.setItem('parametres', JSON.stringify(this.parametres));
+		document.location = '/end';
 	}
 	,
 	loadSvg: function(file) {
-		document.querySelector('.preview-element').innerHTML = this.parametres.id_etape_3;
+		var loc = this.parametres.id_etape_3;
+		//loc= loc.replace('<svg','<svg onload="makeDraggable(evt)" ')
+		
+		document.querySelector('.preview-element').innerHTML = loc;
+		
+		setTimeout(function() {
+			
+			document.querySelector('.preview-element svg').addEventListener('click', (event) => {
+				if (!oneTime) {
+					makeDraggable(event)
+					oneTime = true;
+				}
+		});
+		}, 100);
+		
 		
 	}
 	,
@@ -207,12 +243,76 @@ export default {
 		}
 	}
 	,
-		async logout() {
-	      await this.$auth.logout();
-	      this.$router.push('/login')
-	    }
+	async logout() {
+      await this.$auth.logout();
+      this.$router.push('/login')
+    }
+    ,
+    updateFont(id) {
+	    this.id_font = id;
+	    
+	    document.querySelector('.font_1').classList.remove('selected');
+	    document.querySelector('.font_2').classList.remove('selected');
+	    document.querySelector('.font_3').classList.remove('selected');
+	    document.querySelector('.font_4').classList.remove('selected');
+	    
+	    document.querySelector('.font_' + id).classList.add('selected');
+	    
+	    this.goInitiale();
+	}
+     ,
+    goInitiale() {
+	    if (this.id_font == 1) document.querySelector('.preview-element #texte').style.fontFamily='LoRes 9 OT Narrow';
+	    if (this.id_font == 2) document.querySelector('.preview-element #texte').style.fontFamily='IBMPlexSans-Regular';
+	    if (this.id_font == 3) document.querySelector('.preview-element #texte').style.fontFamily='Anek Latin';
+	    if (this.id_font == 4) document.querySelector('.preview-element #texte').style.fontFamily='Rigatoni';
+	    document.querySelector('.preview-element #texte').textContent = document.querySelector('#initiale').value;
+	}
+    ,
+    motif(index) {
+	    /*motif4_sansmanche_colV
+	    motif4_sansmanche_colclaudine
+	    motif4_sansmanche_colmontant
+	    motif4_sansmanche
+	    motif4_colV
+	    motif4_colclaudine
+	    motif4_colmontant
+	    motif4*/
+	    
+	    
+	    
+	     document.querySelector('.preview-element #motif').style.display = "block";
+	     //document.querySelector('.preview-element #motif1-' + index).style.fill = "transparent";
+	     //document.querySelector('.preview-element #motif1_colV').style.display = "block";
+	     //document.querySelector('.preview-element #motif1_colV').style.fill = "transparent";
+	     
+	     
+	    //motif1-2
+	    
+	    /*if (document.querySelector('.preview-element #colV').style.display == "block") {
+		    document.querySelector('.preview-element #motif' + index + '_colV').style.display = "block";
+		    document.querySelector('.preview-element #motif' + index + '_colclaudine').style.display = "none";
+		    document.querySelector('.preview-element #motif' + index + '_colmontant').style.display = "none";
+		}
+		
+		if (document.querySelector('.preview-element #colclaudine').style.display == "block") {
+			console.log('.preview-element #motif' + index + '_colclaudine')
+		    document.querySelector('.preview-element #motif' + index + '_colclaudine').style.display = "block";
+		    document.querySelector('.preview-element #motif' + index + '_colV').style.display = "none";
+		    document.querySelector('.preview-element #motif' + index + '_colmontant').style.display = "none";
+		}
+
+		if (document.querySelector('.preview-element #colmontant').style.display == "block") {
+			console.log("lalal")
+		    document.querySelector('.preview-element #motif' + index + '_colmontant').style.display = "block";
+		    document.querySelector('.preview-element #motif' + index + '_colclaudine').style.display = "none";
+		    document.querySelector('.preview-element #motif' + index + '_colV').style.display = "none";
+		}*/
+    }
   }
 }
+
+
 </script>
 
 <style scoped>
