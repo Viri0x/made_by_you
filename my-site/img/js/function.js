@@ -20,6 +20,7 @@ var getFolderLevel = function(data, id){
 }
 
 var selectedElement, offset;
+
 function getMousePosition(evt) {
   var CTM = document.querySelector('#Calque_2').getScreenCTM();
   return {
@@ -29,7 +30,6 @@ function getMousePosition(evt) {
 }
 
 function makeDraggable(evt) {
-	console.log("ICICI - makeDraggable")
   var svg = evt.target;
   svg.addEventListener('mousedown', startDrag);
   svg.addEventListener('mousemove', drag);
