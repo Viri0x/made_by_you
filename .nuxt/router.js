@@ -4,13 +4,13 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _951851ac = () => interopDefault(import('../pages/end.vue' /* webpackChunkName: "pages/end" */))
-const _600c2dba = () => interopDefault(import('../pages/etape-1.vue' /* webpackChunkName: "pages/etape-1" */))
-const _601a453b = () => interopDefault(import('../pages/etape-2.vue' /* webpackChunkName: "pages/etape-2" */))
-const _60285cbc = () => interopDefault(import('../pages/etape-3.vue' /* webpackChunkName: "pages/etape-3" */))
-const _6036743d = () => interopDefault(import('../pages/etape-4.vue' /* webpackChunkName: "pages/etape-4" */))
-const _bf2a5610 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
-const _52799c3e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _c883a44a = () => interopDefault(import('../pages/end.vue' /* webpackChunkName: "pages/end" */))
+const _520c782a = () => interopDefault(import('../pages/etape-1.vue' /* webpackChunkName: "pages/etape-1" */))
+const _51f04928 = () => interopDefault(import('../pages/etape-2.vue' /* webpackChunkName: "pages/etape-2" */))
+const _51d41a26 = () => interopDefault(import('../pages/etape-3.vue' /* webpackChunkName: "pages/etape-3" */))
+const _51b7eb24 = () => interopDefault(import('../pages/etape-4.vue' /* webpackChunkName: "pages/etape-4" */))
+const _1d7a4369 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
+const _53d2a052 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -25,31 +25,31 @@ export const routerOptions = {
 
   routes: [{
     path: "/end",
-    component: _951851ac,
+    component: _c883a44a,
     name: "end"
   }, {
     path: "/etape-1",
-    component: _600c2dba,
+    component: _520c782a,
     name: "etape-1"
   }, {
     path: "/etape-2",
-    component: _601a453b,
+    component: _51f04928,
     name: "etape-2"
   }, {
     path: "/etape-3",
-    component: _60285cbc,
+    component: _51d41a26,
     name: "etape-3"
   }, {
     path: "/etape-4",
-    component: _6036743d,
+    component: _51b7eb24,
     name: "etape-4"
   }, {
     path: "/login",
-    component: _bf2a5610,
+    component: _1d7a4369,
     name: "login"
   }, {
     path: "/",
-    component: _52799c3e,
+    component: _53d2a052,
     name: "index"
   }],
 

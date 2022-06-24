@@ -16,7 +16,7 @@
     "@tailwindcss/forms": "^0.3.3",
     "core-js": "^3.9.1",
     "moment": "^2.29.1",
-    "nuxt": "^2.15.3",
+    "nuxt": "^2.15.8",
     "nuxt-auth": "^2.0.10",
     "one-colorpicker": "^1.0.12",
     "redirect-ssl": "^3.0.0",
