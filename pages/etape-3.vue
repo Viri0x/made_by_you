@@ -8,7 +8,7 @@
  	<div class="content">
 	 	<header>
 	 		<div class="logo"><nuxt-link to="/">MADE BY YOU</nuxt-link></div>
-	 		<div class="like"><img class="img-logo" src="~/assets/img/like.svg" alt="Made by you" /></div>
+	 		<div class="like"><img class="img-logo" src="~/assets/img/like/like3.svg" alt="Made by you" /></div>
 	 	</header>
 	 	
 	 	<div class="content-made">

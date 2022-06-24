@@ -8,7 +8,7 @@
  	<div class="content">
 	 	<header>
 	 		<div class="logo" @click="logout">MADE BY YOU</div>
-	 		<div class="like"><img class="img-logo" src="~/assets/img/like.svg" alt="Made by you" /></div>
+	 		<div class="like"><img class="img-logo" src="~/assets/img/like/like1.svg" alt="Made by you" /></div>
 	 	</header>
 	 	
 	 	<div class="content-made">
