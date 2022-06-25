@@ -31,7 +31,7 @@
 		 	</div>
 		 	<div class="content-made-right etape3">
 			 	
-			 	<div class="infos"><div>…puis sélectionnez la couleur que vous souhaitez lui attribuer :</div></div>
+			 	<div class="infos"><div>Sélectionner une zone de votre haut, puis attribuer lui une couleur :</div></div>
 			 	<div class="choix cursor-pointer">
 
 					 	<div>
@@ -176,8 +176,8 @@ export default {
 			event.target.parentNode.style.backgroundColor = couleur;
 		}		
 		else {
-			document.querySelector('.infos > div').innerHTML = '<strong>Pour attribuer une couleur<br />sélectionner un élément</strong>'
-			setTimeout(function () { document.querySelector('.infos > div').innerHTML='…puis sélectionnez la couleur que vous souhaitez lui attribuer :'; }.bind(this), 2000);
+			document.querySelector('.infos > div').innerHTML = '<strong>Pour attribuer une couleur<br />sélectionner une zone de votre haut</strong>'
+			setTimeout(function () { document.querySelector('.infos > div').innerHTML='Sélectionner une zone de votre haut, puis attribuer lui une couleur :'; }.bind(this), 2000);
 		}
 		
 		this.parametres.id_etape_3 = document.querySelector('.preview-element').innerHTML;

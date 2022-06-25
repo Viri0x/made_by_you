@@ -28,7 +28,7 @@
 		 	</div>
 		 	<div class="content-made-right etape4">
 			 	
-			 	<div class="infos"><div>La personnalisation de votre haut est terminée !<br />Vous pouvez dorénavant signer votre œuvre :</div></div>
+			 	<div class="infos"><div>La personnalisation de votre haut est terminée !<br />Attendez quelques instants pour votre sticker !</div></div>
 			 	<div class="choix cursor-pointer start">
 
 					 						 	

@@ -31,7 +31,7 @@
 		 	</div>
 		 	<div class="content-made-right etape4">
 			 	
-			 	<div class="infos"><div>Pour cette dernière étape de personnalisation, vous pouvez ajouter un motif ainsi que vos initiales (3 lettres max) : </div></div>
+			 	<div class="infos"><div>Pour cette dernière étape de personnalisation, vous pouvez ajouter un motif ainsi que vos initiales : </div></div>
 			 	<div class="choix cursor-pointer start">
 
 					 	<div class="zone_1">
