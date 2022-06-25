@@ -1,2 +1,6 @@
-# made_by_you_new
- made_by_you_new
+# Made by you
+
+Graduation website project for Penninghen Art School
+
+Owner:[Art Director] Lucile Gros  
+Authors: Titosalaun & Viri0x
