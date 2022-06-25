@@ -24,8 +24,8 @@
 			 	
 			 	<div class="preview-nav">
 				 	<div><nuxt-link to="/etape-1">1</nuxt-link></div>
-				 	<div><nuxt-link to="/etape-1">2</nuxt-link></div>
-				 	<div><nuxt-link to="/etape-1">3</nuxt-link></div>
+				 	<div><nuxt-link to="/etape-2">2</nuxt-link></div>
+				 	<div><nuxt-link to="/etape-3">3</nuxt-link></div>
 				 	<div class="active">4</div>
 			 	</div>
 		 	</div>
