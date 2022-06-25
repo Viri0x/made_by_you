@@ -738,6 +738,7 @@ select:-webkit-autofill:focus {
 		height:calc(2 * var(--size_square));
 		margin-left:calc(1 * var(--size_square));
 		font-family: 'LoRes 9 OT Narrow';
+		font-size:26px;
 		
 	}
 	
@@ -1029,6 +1030,7 @@ select:-webkit-autofill:focus {
 	.mainSite .content-made .content-made-right.etape1 .choix {
 		padding-left:calc(10 * var(--size_square));
 		padding-top:calc(3 * var(--size_square));
+		font-size:26px;
 	}
 	
 	.mainSite .content-made .content-made-right.etape2 .choix {
